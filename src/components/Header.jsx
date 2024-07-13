@@ -1,17 +1,17 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React , { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import { FaSearch } from 'react-icons/fa';
 
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      history.push(`/products?filter=${searchTerm}`);
+      navigate(`/products?filter=${searchTerm}`);
     }
   };
     return ( 
@@ -32,6 +32,6 @@ const Header = () => {
       
     </header>
      );
-}
+};
  
 export default Header;
