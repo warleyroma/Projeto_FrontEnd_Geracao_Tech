@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Header from './assets/components';
+import Footer from './assets/components';
 
 
 // Definindo o componente de layout
