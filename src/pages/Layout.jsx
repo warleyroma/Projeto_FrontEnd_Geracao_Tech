@@ -1,20 +1,12 @@
 import React from 'react';
-import Header from './assets/components';
-import Footer from './assets/components';
+import Header from '../components/Header';
 
 
-// Definindo o componente de layout
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <div>
-      {/* Componente do cabeçalho */}
+   
       <Header />
-
-      {/* Conteúdo dinâmico das páginas */}
-      {children}
-
-      {/* Componente do rodapé */}
-      <Footer />
     </div>
   );
 };
