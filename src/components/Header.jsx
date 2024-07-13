@@ -2,6 +2,7 @@ import React , { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import { FaSearch } from 'react-icons/fa';
+import '../App.css';
 
 
 const Header = () => {
@@ -14,21 +15,39 @@ const Header = () => {
       navigate(`/products?filter=${searchTerm}`);
     }
   };
+
+  const handleLogin = () => {
+    
+    navigate('/login');
+  };
+
+  const handleSignUp = () => {
+    
+    navigate('/signup');
+  };
     return ( 
-        <header>
+      <header>
       <Logo />
-      <form onSubmit={handleSearch} style={{ display: 'flex', alignItems: 'center' }}>
+      <form onSubmit={handleSearch}>
         <input
           type="text"
-          placeholder="Buscar produtos..."
+          placeholder="Pesquisar produtos..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          style={{ padding: '5px', fontSize: '16px' }}
+          
         />
-        <button type="submit" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+        <button type="submit" >
           <FaSearch size={20} />
         </button>
       </form>
+      <div>
+        <a href="#"  onClick={handleSignUp}>
+          Cadastre-se
+        </a>
+        <button className='button' onClick={handleLogin}>
+          Entrar
+        </button>
+      </div>
       
     </header>
      );

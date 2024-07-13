@@ -1,0 +1,95 @@
+/* Arquivo App.css 
+
+:root {
+    --primary: #C92071;
+    --secondary: #B5B6F2;
+    --tertiary: #991956;
+    --error: #EE4266;
+    --success: #52CA76;
+    --warning: #F6AA1C;
+  
+    --dark-gray: #1F1F1F;
+    --dark-gray-2: #474747;
+    --dark-gray-3: #666666;
+    --light-gray: #8F8F8F;
+    --light-gray-2: #CCCCCC;
+    --light-gray-3: #F5F5F5;
+    --white: #FFFFFF;
+  }*/
+
+*{
+    padding: 0;
+    margin: 3px 10px;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: underline;
+    color: #474747;
+    font-size: 16px;
+}
+header { 
+    display: flex;
+   justify-content: space-around;
+align-items: center;
+align-content: space-between;
+   
+  }
+
+  form{
+    display: flex;
+    background-color: #F5F5F5;
+    width: 600px;
+    justify-content: space-between;
+    border-radius: 4px;
+  }
+
+  form button {
+  background-color:#F5F5F5;
+  height: 40px;
+  width: 20px;
+  }
+
+  input {
+    background-color: #F5F5F5;
+
+  }
+
+  button {
+ 
+  }
+
+ div .button {
+    height: 40px;
+    width: 114px;
+    border-radius: 4px;
+   background-color: #C92071;
+   color: #FFFFFF;
+  }
+
+  div .button:hover {
+   background-color: #991a57;
+   color: #FFFFFF;
+   transition: 2ms;
+  }
+
+  .a {
+    color: #FFFFFF;;
+  }
+
+  div {
+    
+
+  }
+
+
+ 
+
+
+
+  
