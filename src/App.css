@@ -19,25 +19,25 @@
 
 *{
     padding: 0;
-    margin: 3px 10px;
+    margin: 12px 0 0 15px;
     border: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
     outline: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a{
     text-decoration: underline;
     color: #474747;
     font-size: 16px;
+    margin-left: 8px;
 }
 header { 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
     align-content: flex-start;
    
   }
@@ -45,24 +45,31 @@ header {
   form{
     display: flex;
     background-color: #F5F5F5;
-    width: 600px;
+    width: 525px;
     justify-content: space-between;
     border-radius: 4px;
+    align-items: center;
   }
 
   form button {
+  display: flex;
+  align-self: center;
   background-color:#F5F5F5;
   height: 40px;
-  width: 20px;
+  margin-right: 12px;
+justify-content: center;
   }
 
   input {
     background-color: #F5F5F5;
-
+    width: 95%;
+    font-size: 16px;
+    margin: 0 0 0 10px;
+    letter-spacing: 1,5px;
   }
 
   button {
- 
+ margin: 5px;
   }
 
  div .button {
@@ -79,8 +86,9 @@ header {
    transition: 1000ms;
   }
 
-  .a {
-    color: #FFFFFF;;
+  .botao-cadastre-se {
+    color: #474747;
+    margin: 20px;
   }
 
   div {
@@ -92,13 +100,19 @@ header {
   .nav-bar {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
+    align-content: flex-start;
+    margin-top: 0px;
+    margin-left: 0px;
 }
 
 .nav-bar ul {
     display: flex;
-    gap: 15px;
+    margin: 40px 0px
+    
+}
+
+img {
+  margin-left: 0px;
 }
  
 

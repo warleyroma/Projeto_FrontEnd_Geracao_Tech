@@ -33,7 +33,7 @@ const Header = () => {
       <form onSubmit={handleSearch}>
         <input
           type="text"
-          placeholder="Pesquisar produtos..."
+          placeholder="Pesquisar produto..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           
@@ -43,7 +43,7 @@ const Header = () => {
         </button>
       </form>
       <div>
-        <a href="#"  onClick={handleSignUp}>
+        <a className='botao-cadastre-se' href="#"  onClick={handleSignUp}>
           Cadastre-se
         </a>
         <button className='button' onClick={handleLogin}>

@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../assets/logoheader.svg'; // Certifique-se de que o caminho para a imagem está correto
+import logo from '../assets/logoheader.svg';
+import '../App.css';
 
 const Logo = () => {
   return (
