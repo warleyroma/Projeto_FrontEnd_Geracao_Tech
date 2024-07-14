@@ -35,9 +35,10 @@ a{
 }
 header { 
     display: flex;
-   justify-content: space-around;
-align-items: center;
-align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    align-content: flex-start;
    
   }
 
@@ -88,6 +89,17 @@ align-content: space-between;
   }
 
 
+  .nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 15px;
+}
  
 
 

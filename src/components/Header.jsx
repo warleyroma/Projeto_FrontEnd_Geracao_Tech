@@ -1,5 +1,6 @@
 import React , { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+/*import { NavLink } from "react-router-dom";*/
 import Logo from './Logo';
 import Carrinho from './Carrinho';
 import { FaSearch } from 'react-icons/fa';
@@ -51,6 +52,16 @@ const Header = () => {
       </div>
 
       <Carrinho/>
+
+      <nav className="nav-bar">
+        <ul>
+          <li><Link to={"/"}>Home</Link></li>
+          <li><Link to={"/"}>Produtos</Link></li>
+          <li><Link to={"/"}>Categorias</Link></li>
+          <li><Link to={"/"}>Meus Pedidos</Link></li>
+        </ul>
+      </nav>
+
     </header>
      );
 };
