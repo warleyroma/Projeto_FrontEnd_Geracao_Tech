@@ -2,9 +2,9 @@
 import React from 'react';
 import Logo from './Logo';
 import InfoSection from './InfoSection';
-import { ReactComponent as FacebookIcon } from '../assets/facebook.svg';
-import { ReactComponent as TwitterIcon } from '../assets/twitter.svg';
-import { ReactComponent as InstagramIcon } from '../assets/instagram.svg';
+import facebookIcon from '../assets/facebook.svg';
+import twitterIcon from '../assets/twitter.svg';
+import instagramIcon from '../assets/instagram.svg';
 import '../App.css';
 
 const Footer = () => {
@@ -39,13 +39,13 @@ const Footer = () => {
         </div>
         <div className="footer-social-icons">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <FacebookIcon />
+            <img src={facebookIcon} alt="Facebook" />
           </a>
           <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <TwitterIcon />
+            <img src={twitterIcon} alt="Twitter" />
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <InstagramIcon />
+            <img src={instagramIcon} alt="Instagram" />
           </a>
         </div>
         {informationData.map((info, index) => (
