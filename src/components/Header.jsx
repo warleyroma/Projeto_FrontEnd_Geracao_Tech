@@ -1,6 +1,7 @@
 import React , { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
+import Carrinho from './Carrinho';
 import { FaSearch } from 'react-icons/fa';
 import '../App.css';
 
@@ -48,7 +49,8 @@ const Header = () => {
           Entrar
         </button>
       </div>
-      
+
+      <Carrinho/>
     </header>
      );
 };

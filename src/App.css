@@ -75,7 +75,7 @@ align-content: space-between;
   div .button:hover {
    background-color: #991a57;
    color: #FFFFFF;
-   transition: 2ms;
+   transition: 1000ms;
   }
 
   .a {
