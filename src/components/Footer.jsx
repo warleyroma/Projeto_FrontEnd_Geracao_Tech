@@ -15,15 +15,30 @@ const Footer = () => {
       title: "Informações",
       informations: [
         { text: "Sobre Drip Store", link: "/about" },
+        { text: "Segurança", link: "/seguranca" },
+        { text: "Wishlist", link: "/wishlist" },
         { text: "Blog", link: "/blog" },
+        { text: "Trabalhe Conosco", link: "/trabalheconosco" },
+        { text: "Meus Pedidos", link: "/meuspedidos" }
         // Adicione mais itens conforme necessário
       ]
     },
     {
-      title: "Ajuda",
+      title: "Categoria",
       informations: [
-        { text: "FAQ", link: "/faq" },
-        { text: "Suporte", link: "/support" },
+        { text: "Camisetas", link: "/camisetas" },
+        { text: "Calças", link: "/calcas" },
+        { text: "Bonés", link: "/bones" },
+        { text: "Headphones", link: "/headphones" },
+        { text: "Tênis", link: "/tenis" }
+        // Adicione mais itens conforme necessário
+      ]
+    },
+    {
+      title: "Contato",
+      informations: [
+        { text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza- CE, 60150-161" },
+        { text: "(85) 3051-3411"},
         // Adicione mais itens conforme necessário
       ]
     }
@@ -37,6 +52,9 @@ const Footer = () => {
           <Logo className="footer-logo" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
+        {informationData.map((info, index) => (
+          <InfoSection key={index} title={info.title} informations={info.informations} />
+        ))}
         <div className="footer-social-icons">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <img src={facebookIcon} alt="Facebook" />
@@ -48,9 +66,6 @@ const Footer = () => {
             <img src={instagramIcon} alt="Instagram" />
           </a>
         </div>
-        {informationData.map((info, index) => (
-          <InfoSection key={index} title={info.title} informations={info.informations} />
-        ))}
       </div>
       <hr />
       <p>© {currentYear} Digital Store</p>
