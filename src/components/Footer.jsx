@@ -51,11 +51,8 @@ const Footer = () => {
         <div className="footer-logo-description">
           <Logo className="footer-logo" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        {informationData.map((info, index) => (
-          <InfoSection key={index} title={info.title} informations={info.informations} />
-        ))}
-        <div className="footer-social-icons">
+
+          <div className="footer-social-icons">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <img src={facebookIcon} alt="Facebook" />
           </a>
@@ -66,9 +63,14 @@ const Footer = () => {
             <img src={instagramIcon} alt="Instagram" />
           </a>
         </div>
+        </div>
+        {informationData.map((info, index) => (
+          <InfoSection key={index} title={info.title} informations={info.informations} />
+        ))}
+       
       </div>
       <hr />
-      <p>© {currentYear} Digital Store</p>
+      <p className='p-footer'>© {currentYear} Digital Store</p>
     </footer>
   );
 };

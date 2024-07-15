@@ -1,4 +1,4 @@
-/* Arquivo App.css 
+
 
 :root {
     --primary: #C92071;
@@ -15,11 +15,10 @@
     --light-gray-2: #CCCCCC;
     --light-gray-3: #F5F5F5;
     --white: #FFFFFF;
-  }*/
+  }
 
 *{
     padding: 0;
-    /*margin: 12px 0 0 15px;*/
     margin: 0;
     border: 0;
     box-sizing: border-box;
@@ -35,6 +34,7 @@ a{
     font-size: 16px;
     margin-left: 8px;
 }
+
 header { 
     display: flex;
     flex-wrap: wrap;
@@ -126,9 +126,8 @@ img {
 
 .footer-content {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  border-bottom: 30px #FFFFFF ;
+  
 }
 
 .footer-logo-description {
@@ -178,7 +177,7 @@ img {
 footer hr {
   width: 100%;
   border: 1px solid var(--light-gray);
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 footer p {
@@ -193,3 +192,16 @@ footer p {
   padding-left: 90px;
 }
   
+
+.p-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 12px;
+}
+
+
+.-footer p {
+  margin: 0;
+}

@@ -1,10 +1,13 @@
 import React from 'react';
-import logo from '../assets/logoheader.svg';
-import '../App.css';
+import {ReactComponent as ImgLogo} from '../assets/logoheader.svg';
+
 
 const Logo = () => {
   return (
-    <img src={logo} alt="Logomarca" width="253" height="44" />
+    <div > 
+    
+    < ImgLogo  alt="Logomarca" style={{ width:'253px', height:'44px'}} />
+    </div>
   );
 };
 
