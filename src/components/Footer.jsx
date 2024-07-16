@@ -12,7 +12,7 @@ const Footer = () => {
 
   const informationData = [
     {
-      title: "Informações",
+      title: "Informação",
       informations: [
         { text: "Sobre Drip Store", link: "/about" },
         { text: "Segurança", link: "/seguranca" },
@@ -46,23 +46,26 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-logo-description">
           <Logo className="footer-logo" />
-          <p className='p-loren'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
 
           <div className="footer-social-icons">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <img src={facebookIcon} alt="Facebook" />
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={twitterIcon} alt="Twitter" />
-            </a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <img src={instagramIcon} alt="Instagram" />
             </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <img src={twitterIcon} alt="Twitter" />
+            </a>
+
           </div>
         </div>
-        {informationData.map((info, index) => (
-          <InfoSection key={index} title={info.title} informations={info.informations} />
-        ))}
+        <div className="infosection-content">
+          {informationData.map((info, index) => (
+            <InfoSection key={index} title={info.title} informations={info.informations} />
+          ))}
+        </div>
       </div>
       <hr />
       <p className='p-copyright'>© {currentYear} Digital Store</p>
