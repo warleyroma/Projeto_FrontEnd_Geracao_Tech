@@ -244,7 +244,7 @@ footer hr {
 
 /*ESTILIZAÇÃO DO COMPONENTE SECTIONS*/
 
-/* App.css */
+
 
 .section {
   margin: 20px 0;
@@ -282,4 +282,101 @@ footer hr {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/*ESTILIZAÇÃO DO COMPONENTE CARTAO DE PRODUTO*/
+
+
+
+.product-card {
+  width: 292px;
+  margin: 20px;
+  text-align: center;
+}
+
+.product-image {
+  width: 292px;
+  height: 321px;
+  object-fit: cover;
+}
+
+.product-name {
+  margin: 10px 0;
+  color: var(--dark-gray);
+  font-size: 18px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-price {
+  color: var(--dark-gray);
+  font-size: 24px;
+}
+
+.original-price {
+  color: var(--light-gray);
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  color: var(--dark-gray);
+  font-size: 24px;
+}
+
+
+/*ESTILIZAÇÃO DO COMPONENTE LISTA DE PRODUTOS*/
+
+
+
+.product-listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  width: 292px;
+  margin: 20px;
+  text-align: center;
+}
+
+.product-image {
+  width: 292px;
+  height: 321px;
+  object-fit: cover;
+}
+
+.product-name {
+  margin: 10px 0;
+  color: var(--dark-gray);
+  font-size: 18px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-price {
+  color: var(--dark-gray);
+  font-size: 24px;
+}
+
+.original-price {
+  color: var(--light-gray);
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  color: var(--dark-gray);
+  font-size: 24px;
 }
