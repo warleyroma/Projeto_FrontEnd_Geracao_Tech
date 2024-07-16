@@ -132,13 +132,27 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 20px;
+  padding-right: 10%;
+  margin: 45px 0 0 0;
+  width: 40%;
 }
 
-.footer-logo div {
-  margin-bottom: 10px;
-  fill: #FFFFFF;
+.footer-logo img {
+  margin-bottom: 35px;
+  filter: brightness(0) invert(1);
+  width: 253px;
+  height: 44px;
+
 }
+
+.footer-logo-description p {
+  text-align: left;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 40px;
+}
+
 
 .footer-social-icons {
   display: flex;
@@ -178,10 +192,7 @@ footer hr {
   margin-bottom: 20px;
 }
 
-footer p {
-  text-align: left;
-  width: 100%;
-}
+footer p {}
 
 .footer {
   background-color: #1F1F1F;
@@ -191,15 +202,12 @@ footer p {
 }
 
 
-.p-footer {
+.p-copyright {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   font-size: 12px;
-}
-
-
-.-footer p {
-  margin: 0;
+  text-align: center;
+  width: 100%;
 }

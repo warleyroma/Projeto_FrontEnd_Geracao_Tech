@@ -20,7 +20,6 @@ const Footer = () => {
         { text: "Blog", link: "/blog" },
         { text: "Trabalhe Conosco", link: "/trabalheconosco" },
         { text: "Meus Pedidos", link: "/meuspedidos" }
-        // Adicione mais itens conforme necessário
       ]
     },
     {
@@ -31,18 +30,15 @@ const Footer = () => {
         { text: "Bonés", link: "/bones" },
         { text: "Headphones", link: "/headphones" },
         { text: "Tênis", link: "/tenis" }
-        // Adicione mais itens conforme necessário
       ]
     },
     {
       title: "Contato",
       informations: [
         { text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza- CE, 60150-161" },
-        { text: "(85) 3051-3411" },
-        // Adicione mais itens conforme necessário
+        { text: "(85) 3051-3411" }
       ]
     }
-    // Adicione mais seções conforme necessário
   ];
 
   return (
@@ -50,7 +46,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-logo-description">
           <Logo className="footer-logo" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className='p-loren'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
           <div className="footer-social-icons">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -67,10 +63,9 @@ const Footer = () => {
         {informationData.map((info, index) => (
           <InfoSection key={index} title={info.title} informations={info.informations} />
         ))}
-
       </div>
       <hr />
-      <p className='p-footer'>© {currentYear} Digital Store</p>
+      <p className='p-copyright'>© {currentYear} Digital Store</p>
     </footer>
   );
 };

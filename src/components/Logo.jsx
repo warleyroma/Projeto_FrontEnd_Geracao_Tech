@@ -1,12 +1,11 @@
 import React from 'react';
-import {ReactComponent as ImgLogo} from '../assets/logoheader.svg';
+import  ImgLogo from '../assets/logoheader.svg';
 
 
-const Logo = () => {
+const Logo = ( {className}) => {
   return (
-    <div > 
-    
-    < ImgLogo  alt="Logomarca" style={{ width:'253px', height:'44px'}} />
+    <div className={className} >
+       <img src={ImgLogo} alt="Logomarca" />
     </div>
   );
 };
