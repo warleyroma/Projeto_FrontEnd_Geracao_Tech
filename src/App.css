@@ -37,6 +37,9 @@ body {
   
 }
 
+
+/*ESTILIZAÇÃO DO COMPONENTE HEADER*/
+
 a {
   text-decoration: underline;
   color: #474747;
@@ -126,6 +129,8 @@ img {
   margin-left: 0px;
   align-items: flex-start;
 }
+
+/*ESTILIZAÇÃO DO COMPONENTE FOOTER*/
 
 .footer {
   background-color: var(--dark-gray);
@@ -234,4 +239,47 @@ footer hr {
   width: 100%;
   color: var( --light-gray-2);
   margin-top: 8px;
+}
+
+
+/*ESTILIZAÇÃO DO COMPONENTE SECTIONS*/
+
+/* App.css */
+
+.section {
+  margin: 20px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section-header.left {
+  justify-content: flex-start;
+}
+
+.section-header.center {
+  justify-content: center;
+}
+
+.section-header h2 {
+  color: var(--dark-gray-2);
+  font-size: 24px;
+  margin: 0;
+}
+
+.section-link {
+  color: var(--primary);
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
