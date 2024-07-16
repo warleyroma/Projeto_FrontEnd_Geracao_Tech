@@ -38,7 +38,7 @@ const Footer = () => {
       title: "Contato",
       informations: [
         { text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza- CE, 60150-161" },
-        { text: "(85) 3051-3411"},
+        { text: "(85) 3051-3411" },
         // Adicione mais itens conforme necessário
       ]
     }
@@ -53,21 +53,21 @@ const Footer = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
           <div className="footer-social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <img src={facebookIcon} alt="Facebook" />
-          </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <img src={twitterIcon} alt="Twitter" />
-          </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <img src={instagramIcon} alt="Instagram" />
-          </a>
-        </div>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src={facebookIcon} alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <img src={twitterIcon} alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src={instagramIcon} alt="Instagram" />
+            </a>
+          </div>
         </div>
         {informationData.map((info, index) => (
           <InfoSection key={index} title={info.title} informations={info.informations} />
         ))}
-       
+
       </div>
       <hr />
       <p className='p-footer'>© {currentYear} Digital Store</p>
