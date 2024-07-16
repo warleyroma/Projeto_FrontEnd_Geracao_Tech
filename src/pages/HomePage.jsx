@@ -1,6 +1,6 @@
 // src/pages/HomePage.jsx
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from './Layout';
 import Gallery from '../components/Gallery';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';

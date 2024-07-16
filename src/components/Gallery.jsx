@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../App.css';
-import arrowRightIcon from '../assets/icons/arrow-right.svg';
-import arrowLeftIcon from '../assets/icons/arrow-left.svg';
+import arrowRightIcon from '../assets/arrow-right.svg';
+import arrowLeftIcon from '../assets/arrow-left.svg';
 
 const Gallery = ({ className, width, height, radius, showThumbs, images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
