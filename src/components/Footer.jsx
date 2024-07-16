@@ -20,7 +20,9 @@ const Footer = () => {
         { text: "Blog", link: "/blog" },
         { text: "Trabalhe Conosco", link: "/trabalheconosco" },
         { text: "Meus Pedidos", link: "/meuspedidos" }
+       
       ]
+      
     },
     {
       title: "Categoria",

@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 * {
@@ -33,6 +34,7 @@ body {
   text-decoration: none;
   outline: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
 }
 
 a {
@@ -128,7 +130,7 @@ img {
 .footer {
   background-color: var(--dark-gray);
   color: var(--white);
-  padding: 65px 0 0 0;
+  padding: 55px 0 0 0;
 }
 
 .footer-content {
@@ -183,7 +185,8 @@ img {
 .info-section {
   margin-bottom: 20px;
   width: 250px;
-
+  padding-right: 45px;
+  text-align: justify;
 }
 
 .info-section h3 {
@@ -197,7 +200,7 @@ img {
 }
 
 .info-section ul li {
-  margin: 0 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .info-section ul li a {
@@ -229,4 +232,6 @@ footer hr {
   font-size: 12px;
   text-align: center;
   width: 100%;
+  color: var( --light-gray-2);
+  margin-top: 8px;
 }
