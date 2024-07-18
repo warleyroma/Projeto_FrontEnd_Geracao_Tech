@@ -25,10 +25,36 @@ const featuredCollections = [
     image: "https://via.placeholder.com/292x321.png?text=Produto+2",
     price: 49.9
   },
+
+  {
+    name: "Produto 3",
+    image: "https://via.placeholder.com/292x321.png?text=Produto+2",
+    price: 49.9
+  },
+
+
+  {
+    name: "Produto 4",
+    image: "https://via.placeholder.com/292x321.png?text=Produto+2",
+    price: 49.9
+  },
+
   // Adicione mais produtos conforme necessário
 ];
 
 const trendingProducts = [
+  {
+    name: "Produto 1",
+    image: "https://via.placeholder.com/292x321.png?text=Produto+3",
+    price: 299,
+    priceDiscount: 249.9
+  },
+  {
+    name: "Produto 2",
+    image: "https://via.placeholder.com/292x321.png?text=Produto+4",
+    price: 99.9
+  },
+
   {
     name: "Produto 3",
     image: "https://via.placeholder.com/292x321.png?text=Produto+3",
@@ -37,6 +63,18 @@ const trendingProducts = [
   },
   {
     name: "Produto 4",
+    image: "https://via.placeholder.com/292x321.png?text=Produto+4",
+    price: 99.9
+  },
+
+  {
+    name: "Produto 5",
+    image: "https://via.placeholder.com/292x321.png?text=Produto+3",
+    price: 299,
+    priceDiscount: 249.9
+  },
+  {
+    name: "Produto 6",
     image: "https://via.placeholder.com/292x321.png?text=Produto+4",
     price: 99.9
   },
