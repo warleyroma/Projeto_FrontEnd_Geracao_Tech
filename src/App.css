@@ -246,7 +246,7 @@ footer hr {
 
 
 .section {
-  margin: 20px 0;
+  margin: 150px 0;
 }
 
 .section-header {
@@ -257,7 +257,8 @@ footer hr {
 }
 
 .section-header.left {
-  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
 }
 
 .section-header.center {
