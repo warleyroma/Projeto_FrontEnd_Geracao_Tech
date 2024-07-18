@@ -86,7 +86,7 @@ const HomePage = () => {
     <Layout>
       <Gallery 
         className="custom-gallery" 
-        width="800px" 
+       
         height="600px" 
         radius="10px" 
         showThumbs 
