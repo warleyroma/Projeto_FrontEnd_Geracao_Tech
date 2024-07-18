@@ -383,6 +383,11 @@ footer hr {
 
 /*ESTILIZAÇÃO DO COMPONENTE Gallery*/
 
+.gallery-content{
+  display: flex;
+  justify-content: center;
+}
+
 
 .gallery {
   position: relative;
