@@ -27,7 +27,7 @@ const Gallery = ({ className, width, height, radius, showThumbs, images }) => {
   return (
     <div className={`gallery ${className}`} style={{ width, height }}>
       <div className="gallery-slider" style={{ borderRadius: radius }}>
-        <img src={images[currentIndex].src} alt={`Slide ${currentIndex}`} className="gallery-image" />
+        <img src={images[currentIndex].src} alt={`Slide ${currentIndex}`} className="gallery-image" style={{ borderRadius: radius }} />
         {currentIndex > 0 && (
           <button className="gallery-arrow gallery-arrow-left" onClick={handlePrevClick}>
             <img src={arrowLeftIcon} alt="Previous" />

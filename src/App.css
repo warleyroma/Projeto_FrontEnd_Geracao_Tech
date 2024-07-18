@@ -20,7 +20,6 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   
 }
@@ -385,7 +384,6 @@ footer hr {
 /*ESTILIZAÇÃO DO COMPONENTE Gallery*/
 
 
-
 .gallery {
   position: relative;
 }
@@ -396,10 +394,10 @@ footer hr {
 }
 
 .gallery-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
 }
 
 .gallery-arrow {
@@ -426,11 +424,15 @@ footer hr {
 }
 
 .gallery-thumbnail {
-  margin: 0 5px;
   cursor: pointer;
-  transition: border 0.3s ease;
+  margin-right: 5px;
+  object-fit: cover;
 }
 
 .gallery-thumbnail.active {
-  border: 2px solid var(--primary);
+  border: 2px solid var(--primary-color); /* Ajuste a cor para o seu tema */
+}
+
+.gallery-thumbnail:last-child {
+  margin-right: 0;
 }
