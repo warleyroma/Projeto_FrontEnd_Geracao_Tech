@@ -43,13 +43,19 @@ a {
   text-decoration: underline;
   color: #474747;
   font-size: 16px;
-  margin-left: 8px;
+  margin-right: 25px;
+}
+
+.logo {
+  justify-content: left;
+  margin: 0 90px 0 0;
+  align-items: center;
 }
 
 header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+ 
   align-content: flex-start;
   padding: 50px 0 0 90px;
 
@@ -71,7 +77,9 @@ form button {
   height: 40px;
   margin-right: 12px;
   justify-content: center;
+  align-items: center;
 }
+
 
 input {
   background-color: #F5F5F5;
@@ -104,8 +112,6 @@ div .button:hover {
   margin: 20px;
 }
 
-
-
 .nav-bar {
   width: 100%;
   display: flex;
@@ -127,6 +133,13 @@ div .button:hover {
 img {
   margin-left: 0px;
   align-items: flex-start;
+}
+
+.carrinho {
+  display: flex;
+  align-items: center;
+margin: 0 0 0 0;
+
 }
 
 /*ESTILIZAÇÃO DO COMPONENTE FOOTER*/
@@ -254,12 +267,13 @@ footer hr {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-margin-bottom: 10px;
 }
 
 .section-header.left {
   display: flex;
   justify-content: flex-start;
+  padding: 40px 0 0 90px;
+  background-color: var(--light-gray-3);
 }
 
 .section-header.center {
@@ -281,9 +295,12 @@ margin-bottom: 10px;
 
 .section-content {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-gray-3);
 }
 
 /*ESTILIZAÇÃO DO COMPONENTE CARTAO DE PRODUTO*/
@@ -336,19 +353,20 @@ margin-bottom: 10px;
 
 
 .product-listing {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 20px;
-  background-color: var(--light-gray-3);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; /* Espaçamento entre os itens */
+  
 }
 
 .product-card {
-  width: 292px;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
+
+
 
 .product-image {
   width: 292px;
@@ -389,11 +407,14 @@ margin-bottom: 10px;
 
 .gallery-content {
   position: relative;
+  background-color: var(--light-gray-3);
+  padding: 0 120px 0 120px;
 }
 
 .gallery-slider {
   position: relative;
   overflow: hidden;
+  
 }
 
 .gallery-image {

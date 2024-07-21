@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 /*import { NavLink } from "react-router-dom";*/
 import Logo from './Logo';
@@ -19,16 +19,16 @@ const Header = () => {
   };
 
   const handleLogin = () => {
-    
+
     navigate('/login');
   };
 
   const handleSignUp = () => {
-    
+
     navigate('/signup');
   };
-    return ( 
-      <header>
+  return (
+    <header>
       <Logo />
       <form onSubmit={handleSearch}>
         <input
@@ -36,22 +36,29 @@ const Header = () => {
           placeholder="Pesquisar produto..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          
+
         />
         <button type="submit" >
           <FaSearch size={20} />
         </button>
       </form>
       <div>
-        <a className='botao-cadastre-se' href="#"  onClick={handleSignUp}>
+        <a className='botao-cadastre-se' href="#" onClick={handleSignUp}>
           Cadastre-se
         </a>
         <button className='button' onClick={handleLogin}>
           Entrar
         </button>
+
       </div>
 
-      <Carrinho/>
+
+
+      <div className="carrinho">
+        <Carrinho />
+      </div>
+
+
 
       <nav className="nav-bar">
         <ul>
@@ -63,7 +70,7 @@ const Header = () => {
       </nav>
 
     </header>
-     );
+  );
 };
- 
+
 export default Header;

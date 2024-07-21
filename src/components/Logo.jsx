@@ -4,7 +4,7 @@ import  ImgLogo from '../assets/logoheader.svg';
 
 const Logo = ( {className}) => {
   return (
-    <div className={className} >
+    <div className="logo" >
        <img src={ImgLogo} alt="Logomarca" />
     </div>
   );

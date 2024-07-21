@@ -10,10 +10,10 @@ const ProductListing = ({ products }) => {
       {products.map((product, index) => (
         <ProductCard
           key={index}
-          image={product.image}
           name={product.name}
-          price={`R$ ${product.price.toFixed(2)}`}
-          priceDiscount={product.priceDiscount ? `R$ ${product.priceDiscount.toFixed(2)}` : null}
+          image={product.image}
+          price={product.price}
+          priceDiscount={product.priceDiscount}
         />
       ))}
     </div>
@@ -26,9 +26,9 @@ ProductListing.propTypes = {
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
-      priceDiscount: PropTypes.number
+      priceDiscount: PropTypes.number,
     })
-  ).isRequired
+  ).isRequired,
 };
 
 export default ProductListing;
