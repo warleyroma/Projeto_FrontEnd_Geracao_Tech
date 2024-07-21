@@ -25,36 +25,30 @@ const Gallery = ({ className, width, height, radius, showThumbs, images }) => {
   };
 
   return (
-    <div className="gallery-content">
-    <div className={`gallery ${className}`} style={{ width, height }}>
-      <div className="gallery-slider" style={{ borderRadius: radius }}>
-        <img src={images[currentIndex].src} alt={`Slide ${currentIndex}`} className="gallery-image" style={{ borderRadius: radius }} />
-        {currentIndex > 0 && (
-          <button className="gallery-arrow gallery-arrow-left" onClick={handlePrevClick}>
-            <img src={arrowLeftIcon} alt="Previous" />
-          </button>
-        )}
-        {currentIndex < images.length - 1 && (
-          <button className="gallery-arrow gallery-arrow-right" onClick={handleNextClick}>
-            <img src={arrowRightIcon} alt="Next" />
-          </button>
+    <div className={`gallery-content ${className}`} style={{ width }}>
+      <div className="gallery-slider" style={{ height, borderRadius: radius }}>
+        <img src={images[currentIndex].src} alt={`Slide ${currentIndex}`} className="gallery-image" style={{ borderRadius: radius, width: '100%', height: '100%' }} />
+        <button className="gallery-arrow gallery-arrow-left" onClick={handlePrevClick} disabled={currentIndex === 0}>
+          <img src={arrowLeftIcon} alt="Previous" />
+        </button>
+        <button className="gallery-arrow gallery-arrow-right" onClick={handleNextClick} disabled={currentIndex === images.length - 1}>
+          <img src={arrowRightIcon} alt="Next" />
+        </button>
+        {showThumbs && (
+          <div className="gallery-thumbnails">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image.src}
+                alt={`Thumbnail ${index}`}
+                className={`gallery-thumbnail ${currentIndex === index ? 'active' : ''}`}
+                style={{ width: '117px', height: '95px', borderRadius: radius }}
+                onClick={() => handleThumbnailClick(index)}
+              />
+            ))}
+          </div>
         )}
       </div>
-      {showThumbs && (
-        <div className="gallery-thumbnails">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image.src}
-              alt={`Thumbnail ${index}`}
-              className={`gallery-thumbnail ${currentIndex === index ? 'active' : ''}`}
-              style={{ width: '117px', height: '95px', borderRadius: radius }}
-              onClick={() => handleThumbnailClick(index)}
-            />
-          ))}
-        </div>
-      )}
-    </div>
     </div>
   );
 };
