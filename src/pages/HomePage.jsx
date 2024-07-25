@@ -6,11 +6,10 @@ import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
 
 const images = [
-  { src: 'https://via.placeholder.com/800x600.png?text=Image+1' },
-  { src: 'https://via.placeholder.com/800x600.png?text=Image+2' },
-  { src: 'https://via.placeholder.com/800x600.png?text=Image+3' },
-  { src: 'https://via.placeholder.com/800x600.png?text=Image+4' },
-  { src: 'https://via.placeholder.com/800x600.png?text=Image+5' }
+  { src: '../public/collection-1.png' },
+  { src: '../public/collection-2.png' },
+  { src: '../public/collection-3.png' },
+
 ];
 
 const featuredCollections = [
@@ -100,8 +99,12 @@ const HomePage = () => {
         showThumbs 
         images={images} 
       />
-      <Section title="Coleções em Destaque" titleAlign="left">
-        <ProductListing products={featuredCollections} />
+      <Section title="Coleções em Destaque" titleAlign="center">
+        <div className="collections">
+          <img src="/collection-1.png" alt="Coleção 1" className="collection-image" />
+          <img src="/collection-2.png" alt="Coleção 2" className="collection-image" />
+          <img src="/collection-3.png" alt="Coleção 3" className="collection-image" />
+        </div>
       </Section>
       <Section title="Produtos em Alta" titleAlign="left">
         <ProductListing products={trendingProducts} />
