@@ -92,10 +92,10 @@ const trendingProducts = [
 const HomePage = () => {
   return (
     <Layout>
-      <Gallery 
+       <Gallery 
         className="custom-gallery" 
-       
-        height="600px" 
+        width="1440px"
+        height="681px"
         radius="10px" 
         showThumbs 
         images={images} 
