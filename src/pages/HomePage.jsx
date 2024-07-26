@@ -72,7 +72,7 @@ const trendingProducts = [
 
 const HomePage = () => {
   return (
-    <Layout>
+    <div>
       <Gallery 
         className="custom-gallery" 
         width="1440px"
@@ -96,7 +96,7 @@ const HomePage = () => {
       <Section title="Produtos em Alta" titleAlign="left">
         <ProductListing products={trendingProducts} />
       </Section>
-    </Layout>
+    </div>
   );
 };
 
