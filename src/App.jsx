@@ -15,6 +15,7 @@ const App = () => {
         {/*<Route path="/" element={<Layout />} />*/}
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/produtos" element={<ProductListingPage />} /> {/* Nova rota */}
       </Routes>
     </Router>
     
