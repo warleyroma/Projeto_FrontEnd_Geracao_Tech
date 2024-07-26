@@ -4,7 +4,7 @@ import Layout from './pages/Layout';
 import Products from './pages/Products';
 import HomePage from './pages/HomePage';
 import './App.css';
-
+import ProductListingPage from './pages/ProductListingPage'; 
 const App = () => {
 
   return (
@@ -12,7 +12,7 @@ const App = () => {
    
      <Router>
       <Routes>
-        {/*<Route path="/" element={<Layout />} />*/}
+       
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<Products />} />
         <Route path="/produtos" element={<ProductListingPage />} /> {/* Nova rota */}
