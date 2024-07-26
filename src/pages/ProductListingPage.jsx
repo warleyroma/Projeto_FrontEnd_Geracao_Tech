@@ -6,13 +6,26 @@ const ProductListingPage = () => {
   const productsData = [
     {
       name: 'Nome do produto 1',
-      image: 'public/product-thumb-1.png',
+      image: 'public/product-thumb-1.jpeg',
       price: 200,
       priceDiscount: 149.9
     },
     {
       name: 'Nome do produto 2',
-      image: 'public/product-thumb-2.png',
+      image: 'public/product-thumb-2.jpeg',
+      price: 49.9
+    },
+
+    {
+      name: 'Nome do produto 3',
+      image: 'public/product-thumb-3.jpeg',
+      price: 49.9,
+      priceDiscount: 29.9
+    },
+
+    {
+      name: 'Nome do produto 4',
+      image: 'public/product-thumb-4.jpeg',
       price: 49.9
     },
     // Adicione mais produtos conforme necessário
