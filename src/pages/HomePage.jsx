@@ -6,92 +6,74 @@ import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
 
 const images = [
-  { src: '../public/collection-1.png' },
-  { src: '../public/collection-2.png' },
-  { src: '../public/collection-3.png' },
-
+  { src: '/home-slide-1.jpeg' },
+  { src: '/home-slide-2.jpeg' },
+  { src: '/home-slide-3.jpeg' },
+  { src: '/home-slide-4.jpeg' },
+  { src: '/home-slide-5.jpeg' },
+  { src: '/home-slide-6.jpeg' },
+  { src: '/home-slide-7.jpeg' },
+  { src: '/home-slide-8.jpeg' },
 ];
 
 const featuredCollections = [
-  {
-    name: "Produto 1",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+1",
-    price: 200,
-    priceDiscount: 149.9
-  },
-  {
-    name: "Produto 2",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+2",
-    price: 49.9
-  },
-
-  {
-    name: "Produto 3",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+2",
-    price: 49.9
-  },
-
-
-  
-
-  // Adicione mais produtos conforme necessário
+  { src: '/collection-1.png' },
+  { src: '/collection-2.png' },
+  { src: '/collection-3.png' }
 ];
 
 const trendingProducts = [
   {
     name: "Produto 1",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+1",
+    image: "/product-thumb-1.jpeg",
     price: 299,
     priceDiscount: 249.9
   },
   {
     name: "Produto 2",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+2",
+    image: "/product-thumb-2.jpeg",
     price: 99.9
   },
-
   {
     name: "Produto 3",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+3",
+    image: "/product-thumb-3.jpeg",
     price: 299,
     priceDiscount: 249.9
   },
   {
     name: "Produto 4",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+4",
+    image: "/product-thumb-4.jpeg",
     price: 99.9
   },
-
   {
     name: "Produto 5",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+5",
+    image: "/product-thumb-5.jpeg",
     price: 299,
     priceDiscount: 249.9
   },
   {
     name: "Produto 6",
     image: "https://via.placeholder.com/292x321.png?text=Produto+6",
-    price: 99.9
+    price: 140,
+    priceDiscount: 70.9
   },
-
   {
     name: "Produto 7",
     image: "https://via.placeholder.com/292x321.png?text=Produto+7",
-    price: 99.9
+    price: 205,
+    priceDiscount: 100.9
   },
-
   {
     name: "Produto 8",
     image: "https://via.placeholder.com/292x321.png?text=Produto+8",
-    price: 99.9
-  },
-  // Adicione mais produtos conforme necessário
+    price: 49.9
+  }
 ];
 
 const HomePage = () => {
   return (
     <Layout>
-       <Gallery 
+      <Gallery 
         className="custom-gallery" 
         width="1440px"
         height="681px"
@@ -101,9 +83,14 @@ const HomePage = () => {
       />
       <Section title="Coleções em Destaque" titleAlign="center">
         <div className="collections">
-          <img src="/collection-1.png" alt="Coleção 1" className="collection-image" />
-          <img src="/collection-2.png" alt="Coleção 2" className="collection-image" />
-          <img src="/collection-3.png" alt="Coleção 3" className="collection-image" />
+          {featuredCollections.map((collection, index) => (
+            <img 
+              key={index} 
+              src={collection.src} 
+              alt={`Coleção ${index + 1}`} 
+              className="collection-image" 
+            />
+          ))}
         </div>
       </Section>
       <Section title="Produtos em Alta" titleAlign="left">
