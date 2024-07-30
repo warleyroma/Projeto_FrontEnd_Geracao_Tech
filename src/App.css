@@ -350,57 +350,39 @@ footer hr {
 
 /*ESTILIZAÇÃO DO COMPONENTE LISTA DE PRODUTOS*/
 
-
-
+/* src/pages/ProductListingPage.css */
 .product-listing {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  /* Espaçamento entre os itens */
-
-}
-
-.product-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding: 20px;
 }
 
-
-
-.product-image {
-  width: 292px;
-  height: 321px;
-  object-fit: cover;
+.product-listing-filters {
+  width: 308px;
+  margin-right: 20px;
 }
 
-.product-name {
-  margin: 10px 0;
-  color: var(--dark-gray);
-  font-size: 18px;
+.product-listing-sort {
+  margin-bottom: 20px;
 }
 
-.price-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.product-listing-sort label {
+  display: block;
+  font-size: 16px;
+  color: var(--dark-gray-2);
 }
 
-.product-price {
-  color: var(--dark-gray);
-  font-size: 24px;
+.product-listing-sort select {
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  padding: 10px;
+  border: 1px solid var(--light-gray-2);
+  border-radius: 4px;
 }
 
-.original-price {
-  color: var(--light-gray);
-  text-decoration: line-through;
-}
-
-.discounted-price {
-  color: var(--dark-gray);
-  font-size: 24px;
+.product-listing-content {
+  flex-grow: 1;
 }
 
 
@@ -489,10 +471,11 @@ footer hr {
 }
 
 
-/* Estilizando o filtro de produtos */
 
-/* src/components/FilterGroup.css */
-/* src/components/FilterGroup.css */
+/* src/pages/ProductListingPage.css */
+
+
+
 /* src/components/FilterGroup.css */
 .filter-group {
   padding: 20px;
@@ -530,36 +513,4 @@ footer hr {
 .filter-group-option label {
   font-size: 14px;
   color: var(--dark-gray-2);
-}
-
-
-/*******/
-
-
-/* src/pages/ProductListingPage.css */
-
-
-.product-listing-filters {
-  width: 308px;
-  margin-right: 20px;
-}
-
-.product-listing-sort {
-  margin-bottom: 20px;
-}
-
-.product-listing-sort label {
-  display: block;
-  font-size: 16px;
-  color: var(--dark-gray-2);
-}
-
-.product-listing-sort select {
-  width: 100%;
-  height: 60px;
-  font-size: 16px;
-  color: var(--dark-gray-2);
-  padding: 10px;
-  border: 1px solid var(--light-gray-2);
-  border-radius: 4px;
 }

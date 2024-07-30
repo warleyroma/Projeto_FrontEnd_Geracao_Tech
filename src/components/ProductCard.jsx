@@ -1,6 +1,7 @@
 // src/components/ProductCard.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../App.css';
 
 const ProductCard = ({ name, image, price, priceDiscount }) => {
   return (

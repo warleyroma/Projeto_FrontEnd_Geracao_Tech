@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProductCard from './ProductCard';
+import '../App.css';
 
 const ProductListing = ({ products }) => {
   return (

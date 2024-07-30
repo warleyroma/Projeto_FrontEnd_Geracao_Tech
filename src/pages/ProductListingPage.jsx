@@ -1,15 +1,15 @@
 // src/pages/ProductListingPage.jsx
 import React, { useState } from 'react';
-import Layout from './Layout';
 import Section from '../components/Section';
-import ProductList from '../components/ProductList';
+import ProductListing from '../components/ProductListing';
 import FilterGroup from '../components/FilterGroup';
+import '../App.css';
 
 const ProductListingPage = () => {
   const [sortOrder, setSortOrder] = useState('price-asc');
   const [products, setProducts] = useState([
-    { name: "Nome do produto 1", image: "/public/product-thumb-1.png", price: 200, priceDiscount: 149.9 },
-    { name: "Nome do produto 2", image: "/public/product-thumb-2.png", price: 49.9 }
+    { name: "Nome do produto 1", image: "/public/product-thumb-1.jpeg", price: 200, priceDiscount: 149.9 },
+    { name: "Nome do produto 2", image: "/public/product-thumb-2.jpeg", price: 49.9 }
   ]);
 
   const handleSortChange = (e) => {
@@ -18,7 +18,7 @@ const ProductListingPage = () => {
   };
 
   return (
-    <Layout>
+    <div>
       <div className="product-listing">
         <aside className="product-listing-filters">
           <div className="product-listing-sort">
@@ -29,6 +29,17 @@ const ProductListingPage = () => {
             </select>
           </div>
           <FilterGroup 
+            title="Filtrar por" 
+            inputType="checkbox" 
+            options={[
+              { text: "Option 1", value: "opt1" },
+              { text: "Option 2", value: "opt2" },
+              { text: "Option 3", value: "opt3" },
+              { text: "Option 4", value: "opt4" },
+              { text: "Option 5", value: "opt5" }
+            ]}
+          />
+              <FilterGroup 
             title="Filtrar por" 
             inputType="checkbox" 
             options={[
@@ -53,11 +64,11 @@ const ProductListingPage = () => {
         </aside>
         <section className="product-listing-content">
           <Section title={`${products.length} produtos encontrados`} titleAlign="left">
-            <ProductList products={products} />
+            <ProductListing products={products} />
           </Section>
         </section>
       </div>
-    </Layout>
+      </div>
   );
 };
 

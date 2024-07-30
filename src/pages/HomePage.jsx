@@ -1,9 +1,9 @@
 // src/pages/HomePage.jsx
 import React from 'react';
-import Layout from './Layout';
 import Gallery from '../components/Gallery';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
+import '../App.css';
 
 const images = [
   { src: '/home-slide-1.jpeg' },
