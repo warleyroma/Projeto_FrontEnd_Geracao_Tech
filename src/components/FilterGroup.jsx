@@ -1,38 +1,22 @@
 // src/components/FilterGroup.jsx
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../App.css';
 
-const FilterGroup = ({ title, inputType, options, onChange }) => {
+const FilterGroup = ({ title, inputType, options }) => {
   return (
     <div className="filter-group">
-      <h2 className="filter-title">{title}</h2>
-      <hr className="filter-divider" />
-      {options.map((option, index) => (
-        <label key={index} className="filter-option">
-          <input 
-            type={inputType} 
-            value={option.value || option.text} 
-            onChange={onChange} 
-            className="filter-input" 
-          />
-          {option.text}
-        </label>
-      ))}
+      <h3 className="filter-group-title">{title}</h3>
+      <hr className="filter-group-divider" />
+      <ul className="filter-group-options">
+        {options.map((option, index) => (
+          <li key={index} className="filter-group-option">
+            <input type={inputType} id={`option-${index}`} name="filter" value={option.value || option.text} />
+            <label htmlFor={`option-${index}`}>{option.text}</label>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-};
-
-FilterGroup.propTypes = {
-  title: PropTypes.string.isRequired,
-  inputType: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      value: PropTypes.string
-    })
-  ).isRequired,
-  onChange: PropTypes.func.isRequired
 };
 
 export default FilterGroup;
