@@ -8,8 +8,8 @@ import '../App.css';
 const ProductListingPage = () => {
   const [sortOrder, setSortOrder] = useState('price-asc');
   const [products, setProducts] = useState([
-    { name: "Nome do produto 1", image: "/public/product-thumb-1.jpeg", price: 200, priceDiscount: 149.9 },
-    { name: "Nome do produto 2", image: "/public/product-thumb-2.jpeg", price: 49.9 }
+    { id: 1, name: "Nome do produto 1", image: "/public/product-thumb-1.jpeg", price: 200, priceDiscount: 149.9 },
+    { id: 2, name: "Nome do produto 2", image: "/public/product-thumb-2.jpeg", price: 49.9 }
   ]);
 
   const handleSortChange = (e) => {
@@ -39,17 +39,6 @@ const ProductListingPage = () => {
               { text: "Option 5", value: "opt5" }
             ]}
           />
-              <FilterGroup 
-            title="Filtrar por" 
-            inputType="checkbox" 
-            options={[
-              { text: "Option 1", value: "opt1" },
-              { text: "Option 2", value: "opt2" },
-              { text: "Option 3", value: "opt3" },
-              { text: "Option 4", value: "opt4" },
-              { text: "Option 5", value: "opt5" }
-            ]}
-          />
           <FilterGroup 
             title="Outro filtro" 
             inputType="radio" 
@@ -68,7 +57,7 @@ const ProductListingPage = () => {
           </Section>
         </section>
       </div>
-      </div>
+    </div>
   );
 };
 

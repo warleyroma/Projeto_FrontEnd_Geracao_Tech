@@ -9,7 +9,8 @@ const ProductListing = ({ products }) => {
     <div className="product-listing">
       {products.map((product, index) => (
         <ProductCard
-          key={index}
+          key={product.id}
+          id={product.id}
           name={product.name}
           image={product.image}
           price={product.price.toString()}
@@ -23,6 +24,7 @@ const ProductListing = ({ products }) => {
 ProductListing.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
