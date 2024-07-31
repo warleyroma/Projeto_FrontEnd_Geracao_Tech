@@ -15,8 +15,8 @@ const ProductViewPage = () => {
     priceDiscount: 149.9,
     description: "Descrição detalhada do produto.",
     images: [
-      {"src": "/public/product-image-1.png"},
-      {"src": "/public/product-image-2.png"},
+      { src: "/public/product-image-1.jpeg" },
+      { src: "/public/product-image-2.jpeg" },
       // Add more images as needed
     ],
     options: {
@@ -27,14 +27,16 @@ const ProductViewPage = () => {
 
   const recommendedProducts = [
     {
+      id: 1,
       name: "Nome do produto 1",
-      image: "/public/product-thumb-1.png",
+      image: "/public/product-thumb-1.jpeg",
       price: 200,
       priceDiscount: 149.9
     },
     {
+      id: 2,
       name: "Nome do produto 2",
-      image: "/public/product-thumb-2.png",
+      image: "/public/product-thumb-2.jpeg",
       price: 49.9
     }
   ];
@@ -51,10 +53,7 @@ const ProductViewPage = () => {
           price={product.price}
           priceDiscount={product.priceDiscount}
           description={product.description}
-        >
-          <ProductOptions options={product.options.sizes} shape="square" radius="4px" type="text" />
-          <ProductOptions options={product.options.colors} shape="circle" type="color" />
-        </BuyBox>
+        />
       </div>
       <Section title="Produtos recomendados" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
         <ProductListing products={recommendedProducts} />

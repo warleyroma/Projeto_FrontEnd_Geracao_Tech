@@ -1,18 +1,11 @@
 // src/components/ProductCard.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
-const ProductCard = ({ id, name, image, price, priceDiscount }) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/products/${id}`);
-  };
-
+const ProductCard = ({ name, image, price, priceDiscount }) => {
   return (
-    <div className="product-card" onClick={handleClick}>
+    <div className="product-card">
       <img src={image} alt={name} className="product-image" />
       <h3 className="product-name">{name}</h3>
       <div className="product-price">
@@ -30,7 +23,6 @@ const ProductCard = ({ id, name, image, price, priceDiscount }) => {
 };
 
 ProductCard.propTypes = {
-  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
