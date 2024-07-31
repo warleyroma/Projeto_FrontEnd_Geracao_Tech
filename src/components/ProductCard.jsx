@@ -1,22 +1,32 @@
 // src/components/ProductCard.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import '../App.css';
 
-const ProductCard = ({ id, name, image, price, priceDiscount }) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/product/${id}`);
-  };
-
+const ProductCard = ({ name, image, price, priceDiscount }) => {
   return (
-    <div onClick={handleClick} style={{ cursor: 'pointer' }}>
-      <img src={image} alt={name} />
-      <h2>{name}</h2>
-      <p>{priceDiscount ? <span>${priceDiscount}</span> : <span>${price}</span>}</p>
-      {priceDiscount && <p><strike>${price}</strike></p>}
+    <div className="product-card">
+      <img src={image} alt={name} className="product-image" />
+      <h3 className="product-name">{name}</h3>
+      <div className="product-price">
+        {priceDiscount ? (
+          <>
+            <span className="original-price">{price}</span>
+            <span className="discount-price">{priceDiscount}</span>
+          </>
+        ) : (
+          <span className="price">{price}</span>
+        )}
+      </div>
     </div>
   );
+};
+
+ProductCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  priceDiscount: PropTypes.string
 };
 
 export default ProductCard;

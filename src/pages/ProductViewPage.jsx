@@ -1,61 +1,62 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import Layout from './Layout';
 import Gallery from '../components/Gallery';
 import BuyBox from '../components/BuyBox';
-import ProductOptions from '../components/ProductOptions';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
 
 const ProductViewPage = () => {
-  const { id } = useParams();
-
-  // Dados de exemplo para exibir na página de visualização do produto
   const product = {
-    id,
     name: "Nome do produto",
-    images: [
-      { src: "public/product-image-1.jpeg" },
-      { src: "public/product-image-2.jpeg" },
-    ],
+    reference: "123456",
+    stars: 4.5,
+    rating: 150,
     price: 200,
     priceDiscount: 149.9,
-    description: "Descrição do produto",
-    options: ["39", "41", "42"],
+    description: "Descrição detalhada do produto.",
+    images: [
+      {"src": "/public/product-image-1.png"},
+      {"src": "/public/product-image-2.png"},
+      // Add more images as needed
+    ],
+    options: {
+      sizes: ["39", "41", "42"],
+      colors: ["#000", "#111", "#222"]
+    }
   };
 
   const recommendedProducts = [
     {
       name: "Nome do produto 1",
-      image: "https://url.imagem/do/produto1.jpeg",
+      image: "/public/product-thumb-1.png",
       price: 200,
       priceDiscount: 149.9
     },
     {
       name: "Nome do produto 2",
-      image: "https://url.imagem/do/produto2.jpeg",
+      image: "/public/product-thumb-2.png",
       price: 49.9
     }
   ];
 
   return (
     <Layout>
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Gallery images={product.images} showThumbs width="700px" height="570px" radius="4px" />
-        <BuyBox
-          name={product.name}
+        <BuyBox 
+          name={product.name} 
+          reference={product.reference}
+          stars={product.stars}
+          rating={product.rating}
           price={product.price}
           priceDiscount={product.priceDiscount}
           description={product.description}
         >
-          <ProductOptions options={product.options} shape="square" radius="4px" type="text" />
+          <ProductOptions options={product.options.sizes} shape="square" radius="4px" type="text" />
+          <ProductOptions options={product.options.colors} shape="circle" type="color" />
         </BuyBox>
       </div>
-      <Section
-        title="Produtos recomendados"
-        titleAlign="left"
-        link={{ text: "Ver todos", href: "/products" }}
-      >
+      <Section title="Produtos recomendados" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
         <ProductListing products={recommendedProducts} />
       </Section>
     </Layout>
