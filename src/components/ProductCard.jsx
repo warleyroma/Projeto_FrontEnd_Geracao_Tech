@@ -1,13 +1,17 @@
 // src/components/ProductCard.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
-const ProductCard = ({ name, image, price, priceDiscount }) => {
+const ProductCard = ({ id, name, image, price, priceDiscount }) => {
   return (
     <div className="product-card">
-      <img src={image} alt={name} className="product-image" />
+      <Link to={`/products/${id}`}>
+        <img src={image} alt={name} className="product-image" />
+      </Link>
       <h3 className="product-name">{name}</h3>
+      <p>ID: {id}</p>
       <div className="product-price">
         {priceDiscount ? (
           <>
@@ -23,10 +27,11 @@ const ProductCard = ({ name, image, price, priceDiscount }) => {
 };
 
 ProductCard.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  priceDiscount: PropTypes.string
+  price: PropTypes.number.isRequired,
+  priceDiscount: PropTypes.number
 };
 
 export default ProductCard;
