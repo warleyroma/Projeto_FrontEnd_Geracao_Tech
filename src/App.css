@@ -15,13 +15,20 @@
   --white: #FFFFFF;
 }
 
-html,
+html {
+  height: 100vh;
+  width: 100vw;
+ 
+}
+
 body {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+
   display: flex;
   justify-content: center;
-
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -32,8 +39,7 @@ body {
   list-style: none;
   text-decoration: none;
   outline: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 

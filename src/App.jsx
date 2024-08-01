@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
@@ -9,13 +8,13 @@ import Layout from './pages/Layout';
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route element={<Layout />}>
+      <Layout>
+        <Routes>
           <Route index element={<HomePage />} />
           <Route path="/products" element={<ProductListingPage />} />
           <Route path="/products/:id" element={<ProductViewPage />} />
-        </Route>
-      </Routes>
+        </Routes>
+      </Layout>
     </Router>
   );
 };
