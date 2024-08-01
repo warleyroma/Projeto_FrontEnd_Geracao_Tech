@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-/*import { NavLink } from "react-router-dom";*/
 import Logo from './Logo';
 import Carrinho from './Carrinho';
 import { FaSearch } from 'react-icons/fa';
 import '../App.css';
-
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,14 +17,13 @@ const Header = () => {
   };
 
   const handleLogin = () => {
-
     navigate('/login');
   };
 
   const handleSignUp = () => {
-
     navigate('/signup');
   };
+
   return (
     <header>
       <Logo />
@@ -36,39 +33,46 @@ const Header = () => {
           placeholder="Pesquisar produto..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-
         />
-        <button type="submit" >
+        <button type="submit">
           <FaSearch size={20} />
         </button>
       </form>
-      <div>
-        <a className='botao-cadastre-se' href="#" onClick={handleSignUp}>
+      <div className="redirect-area">
+        <a className="signup-link" href="#" onClick={handleSignUp}>
           Cadastre-se
         </a>
-        <button className='button' onClick={handleLogin}>
+        <button className="login-button" onClick={handleLogin}>
           Entrar
         </button>
-
       </div>
-
-
-
       <div className="carrinho">
         <Carrinho />
       </div>
-
-
-
       <nav className="nav-bar">
         <ul>
-          <li><Link to={"/"}>Home</Link></li>
-          <li><Link to={"/products"}>Produtos</Link></li>
-          <li><Link to={"/"}>Categorias</Link></li>
-          <li><Link to={"/"}>Meus Pedidos</Link></li>
+          <li>
+            <Link to="/" className={window.location.pathname === '/' ? 'active' : ''}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/products" className={window.location.pathname === '/products' ? 'active' : ''}>
+              Produtos
+            </Link>
+          </li>
+          <li>
+            <Link to="/categorias" className={window.location.pathname === '/categorias' ? 'active' : ''}>
+              Categorias
+            </Link>
+          </li>
+          <li>
+            <Link to="/meus-pedidos" className={window.location.pathname === '/meus-pedidos' ? 'active' : ''}>
+              Meus Pedidos
+            </Link>
+          </li>
         </ul>
       </nav>
-
     </header>
   );
 };
