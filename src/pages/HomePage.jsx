@@ -81,28 +81,52 @@ const trendingProducts = [
 const HomePage = () => {
   return (
     <div>
-      <Gallery 
-        className="custom-gallery" 
+      <Gallery
+        className="custom-gallery"
         width="1440px"
         height="681px"
-        radius="10px" 
-        showThumbs 
-        images={images} 
+        radius="10px"
+        showThumbs
+        images={images}
       />
       <Section title="Coleções em Destaque" titleAlign="left">
         <div className="collections">
           {featuredCollections.map((collection, index) => (
             <div key={index} className="collection-item">
-            <img 
-              src={collection.src} 
-              alt={`Coleção ${index + 1}`} 
-              className="collection-image" 
-            />
-            <button className="buy-button">Comprar</button>
+              <img
+                src={collection.src}
+                alt={`Coleção ${index + 1}`}
+                className="collection-image"
+              />
+              <button className="buy-button">Comprar</button>
             </div>
           ))}
         </div>
       </Section>
+
+      <Section title="Coleções em Destaque" titleAlign="center" className="collections-featured">
+  <div class="collections-featured-item">
+    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Camisetas" class="collections-featured-image"/>
+    <a href="#" class="collections-featured-link">Camisetas</a>
+  </div>
+  <div class="collections-featured-item">
+    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Calças" class="collections-featured-image"/>
+    <a href="#" class="collections-featured-link">Calças</a>
+  </div>
+  <div class="collections-featured-item">
+    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Bonés" class="collections-featured-image"/>
+    <a href="#" class="collections-featured-link">Bonés</a>
+  </div>
+  <div class="collections-featured-item">
+    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Headphones" class="collections-featured-image"/>
+    <a href="#" class="collections-featured-link">Headphones</a>
+  </div>
+  <div class="collections-featured-item">
+    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Tênis" class="collections-featured-image"/>
+    <a href="#" class="collections-featured-link">Tênis</a>
+  </div>
+</Section>
+
       <Section title="Produtos em Alta" titleAlign="left">
         <ProductListing products={trendingProducts} />
       </Section>

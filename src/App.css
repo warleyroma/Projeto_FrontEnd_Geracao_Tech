@@ -18,7 +18,7 @@
 html {
   height: 100vh;
   width: 100vw;
- 
+
 }
 
 body {
@@ -67,6 +67,7 @@ body {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: 0.5s ease-out;
 }
 
 .login-button:hover {
@@ -117,8 +118,7 @@ a {
 header {
   display: flex;
   flex-wrap: wrap;
-
-  align-content: flex-start;
+  justify-content: space-between;
   padding: 50px 0 0 90px;
 
 }
@@ -340,6 +340,7 @@ footer hr {
 
 .section-header.center {
   justify-content: center;
+  background-color: var(--light-gray-3);
 }
 
 .section-header h2 {
@@ -358,6 +359,7 @@ footer hr {
 .section-content {
   display: flex;
   justify-content: center;
+  justify-items: center;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
@@ -453,7 +455,7 @@ footer hr {
 .gallery-content {
   position: relative;
   background-color: var(--light-gray-3);
-  
+
   justify-content: center;
   width: 100%;
   margin: 0 auto;
@@ -522,7 +524,16 @@ footer hr {
 .product-listing {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px; /* Ajuste o espaçamento conforme necessário */
+  gap: 20px;
+  /* Ajuste o espaçamento conforme necessário */
+}
+
+
+/*Estilizando a seção coleções em destaque*/
+
+.collection-item {
+  position: relative;
+  margin: 10px 0 100px 0;
 }
 
 .collections {
@@ -531,22 +542,55 @@ footer hr {
 }
 
 .collection-image {
-  width: 30%;
+  width: 90%;
   border-radius: 4px;
 }
 
 
 .buy-button {
-  background-color: #333;
-  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-gray-3);
+  color: var(--primary);
   border: none;
-  padding: 10px 20px;
+  padding: 15px 35px;
+  margin: 0 0 35px 30px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.5s ease-out;
 }
 
 .buy-button:hover {
-  background-color: #444;
+  background-color: var(--secondary);
+  color: var(--light-gray-3);
+  transition: 500ms;
+}
+
+.collections-featured-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 40px 0 0;
+}
+
+.collections-featured-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.collections-featured-link {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  margin:0 0 0 0;
 }
 
 
