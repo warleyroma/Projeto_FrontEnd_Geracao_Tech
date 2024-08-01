@@ -59,7 +59,7 @@ body {
 }
 
 .login-button {
-  background-color: primary;
+  background-color: var(--primary);
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -70,7 +70,9 @@ body {
 }
 
 .login-button:hover {
-  background-color: primary-dark;
+  background-color: #991a57;
+  color: #FFFFFF;
+  transition: 1000ms;
 }
 
 .carrinho {
@@ -355,7 +357,7 @@ footer hr {
 
 .section-content {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
@@ -451,7 +453,10 @@ footer hr {
 .gallery-content {
   position: relative;
   background-color: var(--light-gray-3);
-  padding: 0 120px 0 120px;
+  
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .gallery-slider {
@@ -528,6 +533,20 @@ footer hr {
 .collection-image {
   width: 30%;
   border-radius: 4px;
+}
+
+
+.buy-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #444;
 }
 
 

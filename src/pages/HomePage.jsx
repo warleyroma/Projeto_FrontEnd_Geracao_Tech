@@ -89,15 +89,17 @@ const HomePage = () => {
         showThumbs 
         images={images} 
       />
-      <Section title="Coleções em Destaque" titleAlign="center">
+      <Section title="Coleções em Destaque" titleAlign="left">
         <div className="collections">
           {featuredCollections.map((collection, index) => (
+            <div key={index} className="collection-item">
             <img 
-              key={index} 
               src={collection.src} 
               alt={`Coleção ${index + 1}`} 
               className="collection-image" 
             />
+            <button className="buy-button">Comprar</button>
+            </div>
           ))}
         </div>
       </Section>
