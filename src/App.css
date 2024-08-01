@@ -637,3 +637,90 @@ footer hr {
   font-size: 14px;
   color: var(--dark-gray-2);
 }
+
+/* Estilizando seção oferta especial*/
+
+.section-oferta-especial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.imagem-oferta-especial {
+  width: 50%;
+  padding: 0 50px 0 0;
+  position: relative;
+}
+
+.imagem-oferta-especial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 50%, var(--secondary) 80%);
+  border-radius: 100%;
+  transform: translateX(-45%) translateY(-50%);
+  left: 50%;
+  top: 40%;
+  opacity: 0.3;
+}
+
+
+.imagem-oferta-especial img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.texto-oferta-especial {
+  width: 50%;
+}
+
+.texto-oferta-especial div {
+  margin-bottom: 10px;
+}
+
+.texto-oferta-especial div:first-child {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.texto-oferta-especial div:nth-child(2) {
+  font-size: 36px;
+  font-weight: bold;
+  color: #666;
+}
+
+.texto-oferta-especial div:nth-child(3) {
+  font-size: 24px;
+  color: #999;
+}
+
+.button-ver-oferta {
+
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  color: var(--light-gray-3);
+  border: none;
+  padding: 15px 50px;
+  margin: 40px 0 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+
+}
+
+
+.button-ver-oferta:hover {
+  background-color: var(--tertiary);
+  color: var(--light-gray-3);
+  transition: 500ms;
+  
+}

@@ -3,6 +3,7 @@ import React from 'react';
 import Gallery from '../components/Gallery';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
+import ofertaEspecialImage from '../assets/oferta-especial.png';
 import '../App.css';
 
 const images = [
@@ -78,6 +79,10 @@ const trendingProducts = [
   }
 ];
 
+const ofertaEspecial = [
+  { src: '../assets/oferta-especial.png' },
+];
+
 const HomePage = () => {
   return (
     <div>
@@ -129,6 +134,21 @@ const HomePage = () => {
 
       <Section title="Produtos em Alta" titleAlign="left">
         <ProductListing products={trendingProducts} />
+      </Section>
+
+      <Section>
+        <div className='section-oferta-especial'>
+          <div className='imagem-oferta-especial'>
+            <img src={ofertaEspecialImage}  alt="oferta" />
+          </div>
+          <div className='texto-oferta-especial'>
+          <div>Oferta especial</div>
+          <div>Air Jordan Edição de colecionador</div>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum illum laudantium omnis neque, ex, quia, necessitatibus odit minus possimus mollitia dolor. Nemo nihil totam voluptatum, aut debitis esse? Necessitatibus.</div>
+          <button className='button-ver-oferta'>Ver Oferta</button>
+          </div>
+        </div>
+      
       </Section>
     </div>
   );
