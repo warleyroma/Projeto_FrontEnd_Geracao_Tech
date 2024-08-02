@@ -6,8 +6,10 @@ const Categories = () => {
   return (
     <Section>
 
+<div>
+    <h3>ESTA PÁGINA AINDA ESTÁ EM CONSTRUÇÃO</h3>
+</div>
 
-        
     </Section>
   );
 };

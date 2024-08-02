@@ -62,12 +62,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/categorias" className={window.location.pathname === '/categorias' ? 'active' : ''}>
+            <Link to="/categories" className={window.location.pathname === '/categorias' ? 'active' : ''}>
               Categorias
             </Link>
           </li>
           <li>
-            <Link to="/meus-pedidos" className={window.location.pathname === '/meus-pedidos' ? 'active' : ''}>
+            <Link to="/myorders" className={window.location.pathname === '/meus-pedidos' ? 'active' : ''}>
               Meus Pedidos
             </Link>
           </li>
