@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import Carrinho from './Carrinho';
 import { FaSearch } from 'react-icons/fa';
@@ -8,6 +8,7 @@ import '../App.css';
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -22,6 +23,10 @@ const Header = () => {
 
   const handleSignUp = () => {
     navigate('/signup');
+  };
+
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : '';
   };
 
   return (
@@ -39,9 +44,9 @@ const Header = () => {
         </button>
       </form>
       <div className="redirect-area">
-        <a className="signup-link" href="#" onClick={handleSignUp}>
+        <Link to="/signup" className={isActive('/signup')}>
           Cadastre-se
-        </a>
+        </Link>
         <button className="login-button" onClick={handleLogin}>
           Entrar
         </button>
@@ -52,22 +57,22 @@ const Header = () => {
       <nav className="nav-bar">
         <ul>
           <li>
-            <Link to="/" className={window.location.pathname === '/' ? 'active' : ''}>
+            <Link to="/" className={isActive('/')}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/products" className={window.location.pathname === '/products' ? 'active' : ''}>
+            <Link to="/products" className={isActive('/products')}>
               Produtos
             </Link>
           </li>
           <li>
-            <Link to="/categories" className={window.location.pathname === '/categorias' ? 'active' : ''}>
+            <Link to="/categories" className={isActive('/categories')}>
               Categorias
             </Link>
           </li>
           <li>
-            <Link to="/myorders" className={window.location.pathname === '/meus-pedidos' ? 'active' : ''}>
+            <Link to="/myorders" className={isActive('/myorders')}>
               Meus Pedidos
             </Link>
           </li>
