@@ -1,10 +1,14 @@
 import React from 'react';
 import '../App.css';
 
-const Carrinho = () => {
+const MyOrders = () => {
   return (
-    <img src={carrinho} alt="Carrinho" width="25" height="30" />
+    <Section>
+
+
+        
+    </Section>
   );
 };
 
-export default Carrinho;
+export default MyOrders;
