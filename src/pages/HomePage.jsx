@@ -111,23 +111,23 @@ const HomePage = () => {
 
       <Section title="Coleções em Destaque" titleAlign="center" className="collections-featured">
   <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Camisetas" class="collections-featured-image"/>
+    <img src="https://via.placeholder.com/292x321.png?text=Camisetas" alt="Camisetas" class="collections-featured-image"/>
     <a href="#" class="collections-featured-link">Camisetas</a>
   </div>
   <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Calças" class="collections-featured-image"/>
+    <img src="https://via.placeholder.com/292x321.png?text=Calças" alt="Calças" class="collections-featured-image"/>
     <a href="#" class="collections-featured-link">Calças</a>
   </div>
   <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Bonés" class="collections-featured-image"/>
+    <img src="https://via.placeholder.com/292x321.png?text=Bonés" alt="Bonés" class="collections-featured-image"/>
     <a href="#" class="collections-featured-link">Bonés</a>
   </div>
   <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Headphones" class="collections-featured-image"/>
+    <img src="https://via.placeholder.com/292x321.png?text=Headphones" alt="Headphones" class="collections-featured-image"/>
     <a href="#" class="collections-featured-link">Headphones</a>
   </div>
   <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Produto+8" alt="Tênis" class="collections-featured-image"/>
+    <img src="https://via.placeholder.com/292x321.png?text=Tênis" alt="Tênis" class="collections-featured-image"/>
     <a href="#" class="collections-featured-link">Tênis</a>
   </div>
 </Section>
