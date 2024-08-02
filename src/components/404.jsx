@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import Section from '../components/Section';
+import Section from './Section';
 
 
 const text = "404 :("
@@ -19,7 +19,7 @@ const UnderConstruction = ({text}) => {
 
 
 
-const MyOrders = () => {
+const Error404 = () => {
 
   return (
     <Section>
@@ -29,4 +29,4 @@ const MyOrders = () => {
   );
 };
 
-export default MyOrders;
+export default Error404;
