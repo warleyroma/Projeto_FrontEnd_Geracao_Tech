@@ -11,15 +11,15 @@ const ProductCard = ({ id, name, image, price, priceDiscount }) => {
         <img src={image} alt={name} className="product-image" />
       </Link>
       <h3 className="product-name">{name}</h3>
-      <p>ID: {id}</p>
+      
       <div className="product-price">
         {priceDiscount ? (
           <>
-            <span className="original-price">{price}</span>
-            <span className="discount-price">{priceDiscount}</span>
+            <span className="original-price">${price}</span>
+            <span className="discount-price"> ${priceDiscount}</span>
           </>
         ) : (
-          <span className="price">{price}</span>
+          <span className="price">${price}</span>
         )}
       </div>
     </div>

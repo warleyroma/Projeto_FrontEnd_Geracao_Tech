@@ -30,6 +30,7 @@ const ProductListingPage = () => {
           </div>
           <FilterGroup 
             title="Filtrar por" 
+            subtitle="Marka"
             inputType="checkbox" 
             options={[
               { text: "Option 1", value: "opt1" },
@@ -40,14 +41,36 @@ const ProductListingPage = () => {
             ]}
           />
           <FilterGroup 
-            title="Outro filtro" 
-            inputType="radio" 
+            
+            subtitle="Categoria"
+            inputType="checkbox" 
             options={[
               { text: "Option 1", value: "opt1" },
               { text: "Option 2", value: "opt2" },
               { text: "Option 3", value: "opt3" },
               { text: "Option 4", value: "opt4" },
-              { text: "Option 5", value: "opt5" }
+         
+            ]}
+          />
+          <FilterGroup 
+            
+            subtitle="Genero"
+            inputType="checkbox" 
+            options={[
+              { text: "Option 1", value: "opt1" },
+              { text: "Option 2", value: "opt2" },
+              { text: "Option 3", value: "opt3" },
+           
+            ]}
+          />
+             <FilterGroup 
+            
+            subtitle="Estado"
+            inputType="radio" 
+            options={[
+              { text: "Novo", value: "opt1" },
+              { text: "Usado", value: "opt2" },
+          
             ]}
           />
         </aside>

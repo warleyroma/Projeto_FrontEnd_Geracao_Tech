@@ -1,5 +1,5 @@
 import React from 'react';
-import carrinho from '../assets/minicart.svg'; // Certifique-se de que o caminho para a imagem está correto
+import carrinho from '../assets/minicart.svg'; 
 
 const Carrinho = () => {
   return (

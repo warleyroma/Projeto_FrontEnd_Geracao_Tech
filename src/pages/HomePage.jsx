@@ -85,7 +85,7 @@ const ofertaEspecial = [
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='div'>
       <Gallery
         className="custom-gallery"
         width="1440px"
@@ -104,33 +104,34 @@ const HomePage = () => {
                 className="collection-image"
               />
               <button className="buy-button">Comprar</button>
+              <div className='discount'>30% OFF</div>
             </div>
           ))}
         </div>
       </Section>
 
       <Section title="Coleções em Destaque" titleAlign="center" className="collections-featured">
-  <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Camisetas" alt="Camisetas" class="collections-featured-image"/>
-    <a href="#" class="collections-featured-link">Camisetas</a>
-  </div>
-  <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Calças" alt="Calças" class="collections-featured-image"/>
-    <a href="#" class="collections-featured-link">Calças</a>
-  </div>
-  <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Bonés" alt="Bonés" class="collections-featured-image"/>
-    <a href="#" class="collections-featured-link">Bonés</a>
-  </div>
-  <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Headphones" alt="Headphones" class="collections-featured-image"/>
-    <a href="#" class="collections-featured-link">Headphones</a>
-  </div>
-  <div class="collections-featured-item">
-    <img src="https://via.placeholder.com/292x321.png?text=Tênis" alt="Tênis" class="collections-featured-image"/>
-    <a href="#" class="collections-featured-link">Tênis</a>
-  </div>
-</Section>
+        <div class="collections-featured-item">
+          <img src="https://via.placeholder.com/292x321.png?text=Camisetas" alt="Camisetas" class="collections-featured-image" />
+          <a href="#" class="collections-featured-link">Camisetas</a>
+        </div>
+        <div class="collections-featured-item">
+          <img src="https://via.placeholder.com/292x321.png?text=Calças" alt="Calças" class="collections-featured-image" />
+          <a href="#" class="collections-featured-link">Calças</a>
+        </div>
+        <div class="collections-featured-item">
+          <img src="https://via.placeholder.com/292x321.png?text=Bonés" alt="Bonés" class="collections-featured-image" />
+          <a href="#" class="collections-featured-link">Bonés</a>
+        </div>
+        <div class="collections-featured-item">
+          <img src="https://via.placeholder.com/292x321.png?text=Headphones" alt="Headphones" class="collections-featured-image" />
+          <a href="#" class="collections-featured-link">Headphones</a>
+        </div>
+        <div class="collections-featured-item">
+          <img src="https://via.placeholder.com/292x321.png?text=Tênis" alt="Tênis" class="collections-featured-image" />
+          <a href="#" class="collections-featured-link">Tênis</a>
+        </div>
+      </Section>
 
       <Section title="Produtos em Alta" titleAlign="left">
         <ProductListing products={trendingProducts} />
@@ -139,16 +140,16 @@ const HomePage = () => {
       <Section>
         <div className='section-oferta-especial'>
           <div className='imagem-oferta-especial'>
-            <img src={ofertaEspecialImage}  alt="oferta" />
+            <img src={ofertaEspecialImage} alt="oferta" />
           </div>
           <div className='texto-oferta-especial'>
-          <div>Oferta especial</div>
-          <div>Air Jordan Edição de colecionador</div>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum illum laudantium omnis neque, ex, quia, necessitatibus odit minus possimus mollitia dolor. Nemo nihil totam voluptatum, aut debitis esse? Necessitatibus.</div>
-          <button className='button-ver-oferta'>Ver Oferta</button>
+            <div>Oferta especial</div>
+            <div>Air Jordan Edição de colecionador</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum illum laudantium omnis neque, ex, quia, necessitatibus odit minus possimus mollitia dolor. Nemo nihil totam voluptatum, aut debitis esse? Necessitatibus.</div>
+            <button className='button-ver-oferta'>Ver Oferta</button>
           </div>
         </div>
-      
+
       </Section>
     </div>
   );

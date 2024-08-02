@@ -13,18 +13,23 @@
   --light-gray-2: #CCCCCC;
   --light-gray-3: #F5F5F5;
   --white: #FFFFFF;
+  --discount: #e5ff00;
 }
 
 html {
   height: 100vh;
   width: 100vw;
-
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 body {
   height: 100vh;
   width: 100vw;
-
+  padding: 0;
+  margin: 0;
+  border: 0;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -42,6 +47,10 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
+.div {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
 
 /*ESTILIZAÇÃO DO COMPONENTE HEADER*/
 
@@ -77,7 +86,8 @@ body {
 }
 
 .carrinho {
-  margin-left: 20px;
+
+  align-items: center;
 }
 
 .nav-bar ul {
@@ -119,7 +129,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 50px 0 0 90px;
+  padding: 50px 90px 0 90px;
 
 }
 
@@ -399,16 +409,23 @@ footer hr {
 .product-price {
   color: var(--dark-gray);
   font-size: 24px;
+
 }
 
 .original-price {
   color: var(--light-gray);
   text-decoration: line-through;
+
 }
 
-.discounted-price {
+.discount-price {
   color: var(--dark-gray);
   font-size: 24px;
+  font-weight: bold;
+}
+
+.price {
+  font-weight: bold;
 }
 
 
@@ -417,12 +434,12 @@ footer hr {
 /* src/pages/ProductListingPage.css */
 .product-listing {
   display: flex;
-  padding: 20px;
+  padding: 0 0 0 70px;
 }
 
 .product-listing-filters {
   width: 308px;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .product-listing-sort {
@@ -453,12 +470,13 @@ footer hr {
 /*ESTILIZAÇÃO DO COMPONENTE Gallery*/
 
 .gallery-content {
-  position: relative;
-  background-color: var(--light-gray-3);
 
-  justify-content: center;
-  width: 100%;
+}
+
+.custom-gallery{
+  background-color: #52CA76;
   margin: 0 auto;
+  width: 50%;
 }
 
 .gallery-slider {
@@ -538,14 +556,31 @@ footer hr {
 
 .collections {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .collection-image {
-  width: 90%;
+
   border-radius: 4px;
+  margin: 10px 0px 0 0;
+  width: 98%;
+  height: 100%;
+
+
 }
 
+.discount {
+  position: absolute;
+  background-color: var(--discount);
+  color: var(--dark-gray);
+  border-radius: 20px;
+  padding: 8px 10px;
+  bottom: 175px;
+  margin: 0 0 35px 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
 
 .buy-button {
   position: absolute;
