@@ -4,6 +4,10 @@ import Gallery from '../components/Gallery';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
 import ofertaEspecialImage from '../assets/oferta-especial.png';
+import TenisImage from '../assets/Tenis.png';
+import bonesImage from '../assets/bones.png';
+import camisaImage from '../assets/camisa.png';
+import headphoneImage from '../assets/headphone.png';
 import '../App.css';
 
 const images = [
@@ -112,7 +116,7 @@ const HomePage = () => {
 
       <Section title="Coleções em Destaque" titleAlign="center" className="collections-featured">
         <div class="collections-featured-item">
-          <img src="https://via.placeholder.com/292x321.png?text=Camisetas" alt="Camisetas" class="collections-featured-image" />
+          <img src={camisaImage} alt="Camisetas" class="collections-featured-image" />
           <a href="#" class="collections-featured-link">Camisetas</a>
         </div>
         <div class="collections-featured-item">
