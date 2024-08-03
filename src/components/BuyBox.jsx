@@ -5,7 +5,7 @@ const styles = {
   
   tamanho: {
     display: 'flex',
-    justifyContent: '',
+    justifyContent: 'flex-start',
     alignItems: 'left',
   },
   tamanhoOpcao: {
@@ -17,36 +17,37 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     cursor: 'pointer',
-    margin: '0 10px',
+    margin: '20px 10px 10px 0',
   },
   tamanhoOpcaoSelecionada: {
-    backgroundColor: '#ff00dd',
+    backgroundColor: "var(--primary)",
     color:'#ffffff'
   },
 
   cor: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'left',
   },
   corOpcao: {
-    width: '20px',
-    height: '20px',
-    borderRadius: '50%',
-    border: '1px solid #ccc',
+    padding:'10px',
+    width: '35px',
+    height: '35px',
+    borderRadius: '100%',
     cursor: 'pointer',
-    margin: '0 10px',
+    margin: '20px 10px 10px 0',
   },
   corOpcaoSelecionada: {
-    border: '2px solid #333',
+    outline: '3px solid var(--primary)',
+    outlineOffset: '2px',
   },
 };
 
 const cores = [
-  { id: 1, nome: 'Azul', cor: '#007bff' },
-  { id: 2, nome: 'Vermelho', cor: '#ff0000' },
-  { id: 3, nome: 'Verde', cor: '#00ff00' },
-  { id: 4, nome: 'Amarelo', cor: '#ffff00' },
+  { id: 1, nome: 'Azul', cor: 'var(--cor1)' },
+  { id: 2, nome: 'Vermelho', cor: 'var(--cor2)' },
+  { id: 3, nome: 'cinza', cor: 'var(--cor3)' },
+  { id: 4, nome: 'azul2', cor: 'var(--cor4)' },
 ];
 
 
@@ -59,7 +60,7 @@ const tamanhos = [
 ];
 
 
-const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, description, size, color, titledescription, children }) => {
+const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, description, subtitle, children }) => {
   const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null);
   const [corSelecionada, setCorSelecionada] = useState(null);
 
@@ -71,26 +72,27 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
     setCorSelecionada(cor);
   };
   return (
-    <div style={{ width: '400px', padding: '20px', border: '1px solid var(--light-gray-2)', borderRadius: '4px' }}>
-      <h1 style={{ fontSize: '32px', color: 'var(--dark-gray)' }}>{name}</h1>
-      <p style={{ fontSize: '12px', color: 'var(--dark-gray-3)' }}>REF: {reference}</p>
+    <div style={{ width: '400px', padding: '0 0 0 20px',  }}>
+      <h1 style={{ fontSize: '32px', color: 'var(--dark-gray)', marginBottom: '10px' }}>{name}</h1>
+      <p style={{ fontSize: '12px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>REF: {reference}</p>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-        <span style={{ fontSize: '14px', backgroundColor: 'var(--warning)', borderRadius: '4px', padding: '2px 4px', color: 'white' }}>{stars}</span>
-        <img src="/src/assets/stars.png" alt="star icon" style={{ width: '14px', height: '14px', marginLeft: '5px' }} />
-        <span style={{ fontSize: '14px', color: 'var(--light-gray)', marginLeft: '5px' }}>({rating})</span>
+      <img src="/src/assets/stars.png" alt="star icon" style={{ marginRight: '5px' , marginBottom: '10px'}} />
+        <span style={{ fontSize: '14px', backgroundColor: 'var(--warning)', borderRadius: '4px', padding: '2px 4px', color: 'white', marginBottom: '10px' }}>{stars}</span>
+        
+        <span style={{ fontSize: '14px', color: 'var(--light-gray)', marginLeft: '5px', marginBottom: '10px' }}>({rating} avaliações)</span>
       </div>
       {priceDiscount ? (
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
           <span style={{ fontSize: '32px', color: 'var(--dark-gray-2)' }}>R$ {priceDiscount}</span>
           <span style={{ fontSize: '16px', color: 'var(--light-gray-2)', textDecoration: 'line-through', marginLeft: '10px' }}> {price}</span>
         </div>
       ) : (
         <span style={{ fontSize: '32px', color: 'var(--dark-gray-2)' }}> {price}</span>
       )}
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)' }}>{titledescription}</p>
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-2)' }}>{description}</p>
+      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>{subtitle}</p>
+      <p style={{ fontSize: '14px', color: 'var(--dark-gray-2)', marginBottom: '10px' }}>{description}</p>
   
-
+      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>{subtitle}</p>
       <div style={styles.tamanho}>
         {tamanhos.map((tamanho) => (
           <div
@@ -105,6 +107,7 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
           </div>
         ))}
       </div>
+      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>{subtitle}</p>
       <div style={styles.cor}>
         {cores.map((cor) => (
           <div
