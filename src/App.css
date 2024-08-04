@@ -434,7 +434,7 @@ footer hr {
 .product-listing {
   display: flex;
   flex-flow: row wrap; /* mudado de column para row wrap */
-  padding: 0 0 0 70px;
+  
   width: 100%;
   max-width: 100vw;
   flex-grow: 1; /* adicionado */
@@ -451,7 +451,7 @@ footer hr {
 .product-listing-filters {
   width: 100%;
   height: 100%;
-  padding: 20px
+  
 }
 
 .product-listing-sort {
@@ -488,7 +488,7 @@ flex: 1;
   flex-grow: 1;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .section-productlisting{
@@ -665,7 +665,7 @@ background-color: #52CA76;
 
 /* src/components/FilterGroup.css */
 .filter-group {
-  padding: 20px;
+ 
   background-color: white;
   width: 308px;
 }
