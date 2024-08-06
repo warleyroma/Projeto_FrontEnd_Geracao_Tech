@@ -31,6 +31,7 @@ const ProductListingPage = () => {
   };
 
   return (
+    <Section>
     <div className='section-productlisting'>
       <div className="product-listing-sort">
         <div className='resultados-produtos'><div>Resuldados para "Tênis"</div><div>- 15 produtos</div></div>
@@ -40,6 +41,7 @@ const ProductListingPage = () => {
           <option value="price-desc">Maior preço</option>
         </select>
       </div>
+      <div className="product-listing-page">
       <div className="product-listing">
         <aside className="product-listing-filters">
 
@@ -95,7 +97,9 @@ const ProductListingPage = () => {
           </Section>
         </section>
       </div>
+      </div>
     </div>
+    </Section>
   );
 };
 
