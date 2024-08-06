@@ -17,7 +17,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     cursor: 'pointer',
-    margin: '20px 10px 10px 0',
+    margin: '5px 10px 20px 0',
   },
   tamanhoOpcaoSelecionada: {
     backgroundColor: "var(--primary)",
@@ -31,15 +31,15 @@ const styles = {
   },
   corOpcao: {
     padding:'10px',
-    width: '35px',
-    height: '35px',
+    width: '8px',
+    height: '8px',
     borderRadius: '100%',
     cursor: 'pointer',
-    margin: '20px 10px 10px 0',
+    margin: '5px 10px 20px 0',
   },
   corOpcaoSelecionada: {
     outline: '3px solid var(--primary)',
-    outlineOffset: '2px',
+    outlineOffset: '3px',
   },
 };
 
@@ -60,7 +60,7 @@ const tamanhos = [
 ];
 
 
-const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, description, subtitle, children }) => {
+const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, description, subtitle, subtitle_tam, subtitle_cor, children }) => {
   const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null);
   const [corSelecionada, setCorSelecionada] = useState(null);
 
@@ -73,7 +73,7 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
   };
   return (
     <div style={{ width: '400px', padding: '0 0 0 20px',  }}>
-      <h1 style={{ fontSize: '32px', color: 'var(--dark-gray)', marginBottom: '10px' }}>{name}</h1>
+      <h1 style={{ fontSize: '32px', color: 'var(--dark-gray)', marginBottom: '20px' }}>{name}</h1>
       <p style={{ fontSize: '12px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>REF: {reference}</p>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
       <img src="/src/assets/stars.png" alt="star icon" style={{ marginRight: '5px' , marginBottom: '10px'}} />
@@ -82,17 +82,17 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
         <span style={{ fontSize: '14px', color: 'var(--light-gray)', marginLeft: '5px', marginBottom: '10px' }}>({rating} avaliações)</span>
       </div>
       {priceDiscount ? (
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-          <span style={{ fontSize: '32px', color: 'var(--dark-gray-2)' }}>R$ {priceDiscount}</span>
-          <span style={{ fontSize: '16px', color: 'var(--light-gray-2)', textDecoration: 'line-through', marginLeft: '10px' }}> {price}</span>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '30px' }}>
+          <p style={{fontFamily:"inherit", fontSize: '32px', fontWeight:"bold", color: 'var(--dark-gray-2)',}}>R$ {priceDiscount}</p>
+          <p style={{ fontSize: '16px', color: 'var(--light-gray-2)', textDecoration: 'line-through', marginLeft: '10px' }}> {price}</p>
         </div>
       ) : (
         <span style={{ fontSize: '32px', color: 'var(--dark-gray-2)' }}> {price}</span>
       )}
       <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>{subtitle}</p>
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-2)', marginBottom: '10px' }}>{description}</p>
+      <p style={{ fontSize: '14px', color: 'var(--dark-gray-2)', marginBottom: '30px' }}>{description}</p>
   
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>{subtitle}</p>
+      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)',  }}>{subtitle_tam}</p>
       <div style={styles.tamanho}>
         {tamanhos.map((tamanho) => (
           <div
@@ -107,7 +107,7 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
           </div>
         ))}
       </div>
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>{subtitle}</p>
+      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)',  }}>{subtitle_cor}</p>
       <div style={styles.cor}>
         {cores.map((cor) => (
           <div

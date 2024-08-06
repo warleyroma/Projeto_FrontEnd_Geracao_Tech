@@ -11,7 +11,7 @@ const ProductViewPage = () => {
   
   const product = {
     id,
-    name: "Nome do produto",
+    name: "Tenis Nike",
     reference: "123456",
     stars: 4.5,
     rating: 150,
@@ -19,6 +19,8 @@ const ProductViewPage = () => {
     priceDiscount: 149.9,
     subtitle:"Descrição do produto",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ",
+    subtitle_tam:"Tamanho",
+    subtitle_cor:"Cor",
     images: [
       { src: "/public/produc-image-1.jpeg" },
       { src: "/public/produc-image-2.jpeg" },
@@ -85,7 +87,12 @@ const ProductDetails = ({ product }) => {
         price={product.price}
         priceDiscount={product.priceDiscount}
         subtitle={product.subtitle}
+        subtitle_tam={product.subtitle_tam}
+        subtitle_cor={product.subtitle_cor}
         description={product.description}
+        
+        
+        
       />
     </div>
   );
