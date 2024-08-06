@@ -31,7 +31,7 @@ const ProductListingPage = () => {
   };
 
   return (
-    <Section>
+   
     <div className='section-productlisting'>
       <div className="product-listing-sort">
         <div className='resultados-produtos'><div>Resuldados para "Tênis"</div><div>- 15 produtos</div></div>
@@ -92,14 +92,14 @@ const ProductListingPage = () => {
           />
         </aside>
         <section className="product-listing-content">
-          <Section title={`${products.length} produtos encontrados`} titleAlign="left">
+          
             <ProductListing products={products} />
-          </Section>
+          
         </section>
       </div>
       </div>
     </div>
-    </Section>
+   
   );
 };
 

@@ -90,6 +90,7 @@ const ofertaEspecial = [
 
 const HomePage = () => {
   return (
+    <Section>
     <div className='div'>
       <Gallery
         className="custom-gallery"
@@ -157,6 +158,7 @@ const HomePage = () => {
 
       </Section>
     </div>
+    </Section>
   );
 };
 

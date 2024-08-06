@@ -69,8 +69,10 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <hr />
-      <p className='p-copyright'>© {currentYear} Digital Store</p>
+      <div className='p-copyright'>
+      <div className='divhr'></div>
+      <p className=''>© {currentYear} Digital Store</p>
+      </div>
     </footer>
   );
 };
