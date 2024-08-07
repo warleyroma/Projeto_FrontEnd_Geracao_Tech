@@ -9,6 +9,7 @@ import BonesImage from '../assets/bones.png';
 import CamisaImage from '../assets/camisa.png';
 import HeadphoneImage from '../assets/headphone.png';
 import CalcaImage from '../assets/calca.png';
+import {productsData} from '../data/products';
 import '../App.css';
 
 const images = [
@@ -28,61 +29,7 @@ const featuredCollections = [
   { src: '/collection-3.png' }
 ];
 
-const trendingProducts = [
-  {
-    id: 1,
-    name: "Produto 1",
-    image: "/product-thumb-1.jpeg",
-    price: 299,
-    priceDiscount: 249.9
-  },
-  {
-    id: 2,
-    name: "Produto 2",
-    image: "/product-thumb-2.jpeg",
-    price: 99.9
-  },
-  {
-    id: 3,
-    name: "Produto 3",
-    image: "/product-thumb-3.jpeg",
-    price: 299,
-    priceDiscount: 249.9
-  },
-  {
-    id: 4,
-    name: "Produto 4",
-    image: "/product-thumb-4.jpeg",
-    price: 99.9
-  },
-  {
-    id: 5,
-    name: "Produto 5",
-    image: "/product-thumb-5.jpeg",
-    price: 299,
-    priceDiscount: 249.9
-  },
-  {
-    id: 6,
-    name: "Produto 6",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+6",
-    price: 140,
-    priceDiscount: 70.9
-  },
-  {
-    id: 7,
-    name: "Produto 7",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+7",
-    price: 205,
-    priceDiscount: 100.9
-  },
-  {
-    id: 8,
-    name: "Produto 8",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+8",
-    price: 49.9
-  }
-];
+
 
 const ofertaEspecial = [
   { src: '../assets/oferta-especial.png' },
@@ -140,7 +87,7 @@ const HomePage = () => {
       </Section>
 
       <Section title="Produtos em Alta" titleAlign="left">
-        <ProductListing products={trendingProducts} />
+        <ProductListing products={productsData} />
       </Section>
 
       <Section>
