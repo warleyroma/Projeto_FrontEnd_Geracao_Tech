@@ -6,17 +6,19 @@ import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
 const ProductListing = ({ products }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="product-listing">
-      {products.map((produto, index) => (
-        <div key={index} onClick={() => handleProductClick(produto.id)}>
+      {products.map((product, index) => (
+        <div key={index} onClick={() => navigate(`/products/${product.id}`)}>
           <ProductCard
-            key={produto.id}
-            id={produto.id}
-            name={produto.name}
-            image={produto.image}
-            price={produto.price}
-            priceDiscount={produto.priceDiscount}
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            image={product.image}
+            price={product.price}
+            priceDiscount={product.priceDiscount}
           />
         </div>
       ))}

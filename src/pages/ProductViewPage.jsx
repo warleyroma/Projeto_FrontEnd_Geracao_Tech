@@ -4,6 +4,7 @@ import Gallery from '../components/Gallery';
 import BuyBox from '../components/BuyBox';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
+import {productsData} from '../data/products';
 
 const ProductViewPage = () => {
   const { id } = useParams();
@@ -35,41 +36,11 @@ const ProductViewPage = () => {
     }
   };
 
-  const recommendedProducts = [
-    {
-      id: 1,
-      name: "Nome do produto 1",
-      image: "/public/product-thumb-1.jpeg",
-      price: 200,
-      priceDiscount: 149.9
-    },
-    {
-      id: 2,
-      name: "Nome do produto 2",
-      image: "/public/product-thumb-2.jpeg",
-      price: 49.9
-    },
-
-    {
-      id: 3,
-      name: "Nome do produto 3",
-      image: "/public/product-thumb-3.jpeg",
-      price: 49.9
-    },
-
-    {
-      id: 4,
-      name: "Nome do produto 4",
-      image: "/public/product-thumb-4.jpeg",
-      price: 49.9
-    }
-  ];
-
   return (
     <div>
       <ProductDetails product={product} />
       <Section title="Produtos relacionados" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
-        <ProductListing products={recommendedProducts} />
+        <ProductListing products={productsData} />
       </Section>
     </div>
   );

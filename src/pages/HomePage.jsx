@@ -30,7 +30,6 @@ const featuredCollections = [
 ];
 
 
-
 const ofertaEspecial = [
   { src: '../assets/oferta-especial.png' },
 ];
@@ -86,7 +85,7 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Produtos em Alta" titleAlign="left">
+      <Section title="Produtos em Alta" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
         <ProductListing products={productsData} />
       </Section>
 
