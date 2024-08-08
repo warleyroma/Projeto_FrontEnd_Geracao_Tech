@@ -1,4 +1,5 @@
 import React, { useState }  from 'react';
+import '../App.css';
 
 
 const styles = {
@@ -60,7 +61,25 @@ const tamanhos = [
 ];
 
 
+
+
 const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, description, subtitle, subtitle_tam, subtitle_cor, children }) => {
+
+  const estrelas = document.querySelectorAll('.estrela');
+
+  estrelas.forEach((estrela) => {
+    estrela.addEventListener('click', () => {
+      const avaliacao = estrela.getAttribute('data-avaliacao');
+      const todasEstrelas = document.querySelectorAll('.estrela');
+      todasEstrelas.forEach((todasEstrelas) => {
+        todasEstrelas.classList.remove('selecionada');
+      });
+      for (let i = 0; i < avaliacao; i++) {
+        todasEstrelas[i].classList.add('selecionada');
+      }
+    });
+  });
+
   const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null);
   const [corSelecionada, setCorSelecionada] = useState(null);
 
@@ -76,7 +95,13 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
       <h1 style={{ fontSize: '32px', color: 'var(--dark-gray)', marginBottom: '20px' }}>{name}</h1>
       <p style={{ fontSize: '12px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>REF: {reference}</p>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-      <img src="/src/assets/stars.png" alt="star icon" style={{ marginRight: '5px' , marginBottom: '10px'}} />
+      <div className='estrelas'>
+        <span class="estrela" data-avaliacao="1"></span>
+        <span class="estrela" data-avaliacao="2"></span>
+        <span class="estrela" data-avaliacao="3"></span>
+        <span class="estrela" data-avaliacao="4"></span>
+        <span class="estrela" data-avaliacao="5"></span>
+      </div>
         <span style={{ fontSize: '14px', backgroundColor: 'var(--warning)', borderRadius: '4px', padding: '2px 4px', color: 'white', marginBottom: '10px' }}>{stars}</span>
         
         <span style={{ fontSize: '14px', color: 'var(--light-gray)', marginLeft: '5px', marginBottom: '10px' }}>({rating} avaliações)</span>

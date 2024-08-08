@@ -86,7 +86,9 @@ const HomePage = () => {
       </Section>
 
       <Section title="Produtos em Alta" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
-        <ProductListing products={productsData} />
+      <div className='alinhaprodutos'>
+        <ProductListing products={productsData.slice(0, 8)} />
+        </div>
       </Section>
 
       <Section>

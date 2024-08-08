@@ -361,7 +361,7 @@ footer hr {
 .section-header.left {
   display: flex;
   justify-content: flex-start;
-  padding: 50px 0 0 90px;
+  padding: 50px 90px 0 90px;
   background-color: var(--light-gray-3);
 }
 
@@ -447,7 +447,13 @@ footer hr {
   display: flex;
   flex-flow: row wrap;
   flex-grow: 1;
-  
+}
+
+.alinhaprodutos .product-listing {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  padding: 0 65px 0 65px;
 }
 
 .product-listing>div {
@@ -833,4 +839,33 @@ footer hr {
   text-align: center;
   margin: 0 0 40px 0;
   font-weight: lighter;
+}
+
+
+.estrelas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 2px;
+  padding-bottom: 15px;
+}
+
+.estrela {
+  font-size: 25px;
+  margin-right: 0px;
+  cursor: pointer;
+  
+}
+
+.estrela::before {
+  content: "\2605"; /* Unicode para estrela */
+  color: #ccc; /* Cor do contorno */
+}
+
+.estrela.selecionada::before {
+  color: var(--warning); /* Cor da estrela preenchida */
+}
+
+.estrela:hover::before {
+  color:var(--warning); /* Cor da estrela ao passar o mouse */
 }
