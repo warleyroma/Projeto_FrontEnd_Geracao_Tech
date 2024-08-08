@@ -597,21 +597,22 @@ footer hr {
 
 .collection-item {
   position: relative;
-  margin: 10px 0 100px 0;
+  margin: 10px 0 50px 0;
+  width: 100%;
 }
 
 .collections {
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
 .collection-image {
 
   border-radius: 4px;
-  margin: 10px 0px 0 0;
-  width: 98%;
-  height: 100%;
+  margin: 10px 5px 0 0;
+  width: 450px; /* aumenta a largura para 300px */
+  height: 280px; /* aumenta a altura para 300px */
+  object-fit: cover;
 
 
 }
