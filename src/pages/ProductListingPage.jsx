@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
 import FilterGroup from '../components/FilterGroup';
-import '../App.css';
+/*import '../App.css';*/
+import '../styles/App.css';
 import {productsData} from '../data/products';
 
 const ProductListingPage = () => {

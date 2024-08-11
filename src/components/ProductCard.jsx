@@ -2,7 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../App.css';
+/*import '../App.css';*/
+import '../styles/App.css';
 
 const ProductCard = ({ id, name, image, price, priceDiscount, subtitle, description, subtitle_tam, subtitle_cor, images_galery  }) => {
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
-import '../App.css';
+/*import '../App.css';*/
+import '../styles/App.css';
 import Error404 from '../components/Error404';
 
 

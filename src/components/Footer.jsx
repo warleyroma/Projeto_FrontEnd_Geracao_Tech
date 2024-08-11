@@ -5,7 +5,8 @@ import InfoSection from './InfoSection';
 import facebookIcon from '../assets/facebook.svg';
 import twitterIcon from '../assets/twitter.svg';
 import instagramIcon from '../assets/instagram.svg';
-import '../App.css';
+/*import '../App.css';*/
+import '../styles/App.css'; 
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
