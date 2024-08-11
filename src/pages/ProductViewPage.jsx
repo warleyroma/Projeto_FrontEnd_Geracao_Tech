@@ -5,11 +5,10 @@ import BuyBox from '../components/BuyBox';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
 import { productsData } from '../data/products';
+import '../styles/pages/ProductViewPage.css'; 
 
 const ProductViewPage = () => {
   const { id } = useParams();
-
-  
 
 
   const product = {
@@ -53,8 +52,9 @@ const ProductViewPage = () => {
 const ProductDetails = ({ product }) => {
   return (
 
-    <div style={{ backgroundColor: 'var(--light-gray-3)  ', display: 'flex', justifyContent: 'center' }}>
-      
+    <div className='section-buybox'>
+      {/*<div className='title-section-buybox'>Home / Produtos / Tênis / Nike</div>*/}
+    <Section title="Home / Produtos / Tênis / Nike" titleAlign='left'>
       <Gallery images={product.images} showThumbs width="700px" height="570px" radius="4px" />
       <BuyBox
         name={product.name}
@@ -71,6 +71,7 @@ const ProductDetails = ({ product }) => {
 
 
       />
+      </Section>
     </div>
 
 

@@ -1,0 +1,10 @@
+.section-buybox {
+    background-color: var(--light-gray-3);
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.title-section-buybox{
+    font-weight: bold;
+}

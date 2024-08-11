@@ -51,39 +51,3 @@ body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
-
-
-
-
-
-
-
-/*
-.estrelas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-right: 2px;
-  padding-bottom: 15px;
-}
-
-.estrela {
-  font-size: 25px;
-  margin-right: 0px;
-  cursor: pointer;
-  
-}
-
-.estrela::before {
-  content: "\2605"; /* Unicode para estrela 
- 
-
-.estrela.selecionada::before {
-  color: var(--warning); /* Cor da estrela preenchida 
-}
-
-.estrela:hover::before {
-  color:var(--warning); /* Cor da estrela ao passar o mouse 
-}
-
-*/
