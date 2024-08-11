@@ -18,10 +18,10 @@
     margin-bottom: 10px;
 }
 
-.content-estrelas-rating-rating-count {
+.buybox .content-estrelas-rating-rating-count {
     display: flex;
     align-items: center;
-   
+    width: 100%;
 }
 
 .buybox .estrelas {
@@ -31,16 +31,33 @@
     margin-right: 10px;
 }
 
-.buybox .estrela {
-    font-size: 30px;
-    color: var(--light-gray);
+.estrelas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 2px;
+    padding-bottom: 15px;
+  }
+  
+  .estrela {
+    font-size: 25px;
+    margin-right: 0px;
     cursor: pointer;
-}
-
-.buybox .estrela.selecionada {
-    color: var(--warning);
-}
-
+  
+  }
+  
+  .estrela::before {
+    content: "\2605"; /* Unicode para estrela */
+    color: #ccc; /* Cor do contorno */
+  }
+  
+  .estrela.selecionada::before {
+    color: var(--warning); /* Cor da estrela preenchida */
+  }
+  
+  .estrela:hover::before {
+    color:var(--warning); /* Cor da estrela ao passar o mouse */
+  }
 .buybox .rating {
     display: flex;
     justify-content: center;
@@ -96,7 +113,7 @@
     color: var(--dark-gray-3);
     margin-bottom: 20px;
     text-align: justify;
-    width: 150%;
+    width: 100%;
 }
 
 .buybox .subtitle {
@@ -146,7 +163,7 @@
     justify-content: flex-start;
     align-items: left;
     margin-bottom: 20px;
-    
+
 }
 
 .buybox .corOpcao {
@@ -158,7 +175,7 @@
     margin-right: 20px;
 }
 
-.buybox .corOpcaoSelecionada{
+.buybox .corOpcaoSelecionada {
     outline: 3px solid var(--primary);
     outline-offset: 3px;
 
@@ -167,7 +184,7 @@
 .buybox .botao-comprar {
     background-color: var(--warning);
     color: var(--white);
-   margin: 0;
+    margin: 0;
     width: 50%;
     height: 60px;
     cursor: pointer;

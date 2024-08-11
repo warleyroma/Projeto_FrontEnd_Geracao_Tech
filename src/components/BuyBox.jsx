@@ -33,6 +33,8 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
     setCorSelecionada(cor);
   };
 
+
+
   return (
     <div className="buybox">
       <h1 className="title">{name}</h1>
