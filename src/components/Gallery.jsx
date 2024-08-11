@@ -1,8 +1,7 @@
 // src/components/Gallery.jsx
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-/*import '../App.css';*/
-import '../styles/App.css'; 
+import '../styles/components/Gallery.css';
 import arrowRightIcon from '../assets/arrow-right.svg';
 import arrowLeftIcon from '../assets/arrow-left.svg';
 

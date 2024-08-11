@@ -1,7 +1,6 @@
 // src/components/FilterGroup.jsx
 import React from 'react';
-/*import '../App.css';*/
-import '../styles/App.css'; 
+import '../styles/components/FilterGroup.css';
 
 
 const FilterGroup = ({ title, subtitle, inputType, options }) => {

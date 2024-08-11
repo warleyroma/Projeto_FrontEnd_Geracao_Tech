@@ -1,7 +1,5 @@
-// src/components/Section.jsx
 import React from 'react';
-/*import '../App.css';*/
-import '../styles/App.css';
+import '../styles/components/Section.css'; 
 
 const Section = ({ title, titleAlign = 'left', link, children }) => {
   return (

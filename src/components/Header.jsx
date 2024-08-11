@@ -3,8 +3,7 @@ import { useNavigate, Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import Carrinho from './Carrinho';
 import { FaSearch } from 'react-icons/fa';
-/*import '../App.css';*/
-import '../styles/App.css'; 
+import '../styles/components/Header.css'; 
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');

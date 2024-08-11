@@ -1,0 +1,69 @@
+/* Estilo para o compoente productlisting e para a página productlisting */
+.section-productlisting{
+    padding: 0 90px 0 90px;
+  }
+  
+  .product-listing {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+  }
+  
+  .alinhaprodutos .product-listing {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    padding: 0 65px 0 65px;
+  }
+  
+  .product-listing>div {
+    width: calc(23% - 20px);
+    margin: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  
+  .product-listing-filters {
+    width: 80%;
+    height: 100%;
+  
+  }
+  
+  .product-listing-sort {
+    
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .resultados-produtos {
+    display: flex;
+    font-weight: bold;
+    flex: 1;
+  }
+  
+  .product-listing-sort label {
+    display: block;
+    font-size: 16px;
+    color: var(--dark-gray-2);
+    margin-right: 10px;
+  }
+  
+  .product-listing-sort select {
+    width: 20%;
+    height: 60px;
+    font-size: 16px;
+    color: var(--dark-gray-2);
+    padding: 10px;
+    border: 1px solid var(--light-gray-2);
+    border-radius: 4px;
+  }
+  
+  .product-listing-content {
+    flex-grow: 1;
+    width: 50%;
+    height: 100%;
+    padding: 0 90px 0 0;
+  }
+  

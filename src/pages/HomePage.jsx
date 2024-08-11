@@ -10,8 +10,7 @@ import CamisaImage from '../assets/camisa.png';
 import HeadphoneImage from '../assets/headphone.png';
 import CalcaImage from '../assets/calca.png';
 import {productsData} from '../data/products';
-/*import '../App.css';*/
-import '../styles/App.css';
+import '../styles/pages/HomePage.css'; 
 
 const images = [
   { src: '/home-slide-1.jpeg' },

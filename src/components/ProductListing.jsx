@@ -3,8 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProductCard from './ProductCard';
 import { useNavigate } from 'react-router-dom';
-/*import '../App.css';*/
-import '../styles/App.css';
+import '../styles/components/ProductListingPage.css';
 
 const ProductListing = ({ products }) => {
   const navigate = useNavigate();

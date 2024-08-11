@@ -1,88 +1,29 @@
-import React, { useState }  from 'react';
-/*import '../App.css';*/
-import '../styles/App.css'; 
-
-
-const styles = {
-  
-  tamanho: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'left',
-  },
-  tamanhoOpcao: {
-    width: '50px',
-    height: '50px',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    cursor: 'pointer',
-    margin: '5px 10px 20px 0',
-  },
-  tamanhoOpcaoSelecionada: {
-    backgroundColor: "var(--primary)",
-    color:'#ffffff'
-  },
-
-  cor: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'left',
-  },
-  corOpcao: {
-    padding:'10px',
-    width: '8px',
-    height: '8px',
-    borderRadius: '100%',
-    cursor: 'pointer',
-    margin: '5px 10px 20px 0',
-  },
-  corOpcaoSelecionada: {
-    outline: '3px solid var(--primary)',
-    outlineOffset: '3px',
-  },
-};
-
-const cores = [
-  { id: 1, nome: 'Azul', cor: 'var(--cor1)' },
-  { id: 2, nome: 'Vermelho', cor: 'var(--cor2)' },
-  { id: 3, nome: 'cinza', cor: 'var(--cor3)' },
-  { id: 4, nome: 'azul2', cor: 'var(--cor4)' },
-];
-
-
-const tamanhos = [
-  { id: 1, nome: '39' },
-  { id: 2, nome: '40' },
-  { id: 3, nome: '41' },
-  { id: 4, nome: '42' },
-  { id: 5, nome: '43' },
-];
-
-
-
+import React, { useState } from 'react';
+import '../styles/components/buybox.css';
 
 const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, description, subtitle, subtitle_tam, subtitle_cor, children }) => {
-
-  const estrelas = document.querySelectorAll('.estrela');
-
-  estrelas.forEach((estrela) => {
-    estrela.addEventListener('click', () => {
-      const avaliacao = estrela.getAttribute('data-avaliacao');
-      const todasEstrelas = document.querySelectorAll('.estrela');
-      todasEstrelas.forEach((todasEstrelas) => {
-        todasEstrelas.classList.remove('selecionada');
-      });
-      for (let i = 0; i < avaliacao; i++) {
-        todasEstrelas[i].classList.add('selecionada');
-      }
-    });
-  });
-
+  const [selectedStars, setSelectedStars] = useState(null);
   const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null);
   const [corSelecionada, setCorSelecionada] = useState(null);
+
+  const tamanhos = [
+    { id: 1, nome: '39' },
+    { id: 2, nome: '40' },
+    { id: 3, nome: '41' },
+    { id: 4, nome: '42' },
+    { id: 5, nome: '43' },
+  ];
+
+  const cores = [
+    { id: 1, nome: 'Azul', cor: 'var(--cor1)' },
+    { id: 2, nome: 'Vermelho', cor: 'var(--cor2)' },
+    { id: 3, nome: 'Cinza', cor: 'var(--cor3)' },
+    { id: 4, nome: 'Azul2', cor: 'var(--cor4)' },
+  ];
+
+  const handleStarClick = (avaliacao) => {
+    setSelectedStars(avaliacao);
+  };
 
   const handleTamanhoChange = (tamanho) => {
     setTamanhoSelecionado(tamanho);
@@ -91,64 +32,63 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
   const handleCorChange = (cor) => {
     setCorSelecionada(cor);
   };
+
   return (
-    <div style={{ width: '400px', padding: '0 0 0 20px',  }}>
-      <h1 style={{ fontSize: '32px', color: 'var(--dark-gray)', marginBottom: '20px' }}>{name}</h1>
-      <p style={{ fontSize: '12px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>REF: {reference}</p>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-      <div className='estrelas'>
-        <span class="estrela" data-avaliacao="1"></span>
-        <span class="estrela" data-avaliacao="2"></span>
-        <span class="estrela" data-avaliacao="3"></span>
-        <span class="estrela" data-avaliacao="4"></span>
-        <span class="estrela" data-avaliacao="5"></span>
+    <div className="buybox">
+      <h1 className="title">{name}</h1>
+      <p className="reference">Casual | Nike |  REF: {reference}</p>
+      <div className='content-estrelas-rating-rating-count'>
+      <div className="estrelas">
+        {[...Array(5)].map((_, i) => (
+          <span
+            key={i}
+            className={`estrela ${selectedStars > i ? 'selecionada' : ''}`}
+            data-avaliacao={i + 1}
+            onClick={() => handleStarClick(i + 1)}
+          ></span>
+        ))}
       </div>
-        <span style={{ fontSize: '14px', backgroundColor: 'var(--warning)', borderRadius: '4px', padding: '2px 4px', color: 'white', marginBottom: '10px' }}>{stars}</span>
-        
-        <span style={{ fontSize: '14px', color: 'var(--light-gray)', marginLeft: '5px', marginBottom: '10px' }}>({rating} avaliações)</span>
+      <div className="rating">
+        <span>{stars}</span>
+        <span>★</span></div>
+      <span className="rating-count">({rating} avaliações)</span>
       </div>
       {priceDiscount ? (
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '30px' }}>
-          <p style={{fontFamily:"inherit", fontSize: '32px', fontWeight:"bold", color: 'var(--dark-gray-2)',}}>R$ {priceDiscount}</p>
-          <p style={{ fontSize: '16px', color: 'var(--light-gray-2)', textDecoration: 'line-through', marginLeft: '10px' }}> {price}</p>
+        <div className="price">
+          <p className='coin'>R$</p>
+          <p className="price-discount">{priceDiscount}</p>
+          <p className="price-original">{price}</p>
         </div>
       ) : (
-        <span style={{ fontSize: '32px', color: 'var(--dark-gray-2)' }}> {price}</span>
+        <span className="price">{price}</span>
       )}
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)', marginBottom: '10px' }}>{subtitle}</p>
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-2)', marginBottom: '30px' }}>{description}</p>
-  
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)',  }}>{subtitle_tam}</p>
-      <div style={styles.tamanho}>
+       <p className="subtitle">{subtitle}</p>
+      <p className="description">{description}</p>
+      <p className="subtitle-tam">{subtitle_tam}</p>
+      <div className="tamanho">
         {tamanhos.map((tamanho) => (
           <div
             key={tamanho.id}
-            style={{
-              ...styles.tamanhoOpcao,
-              ...(tamanhoSelecionado === tamanho.nome && styles.tamanhoOpcaoSelecionada),
-            }}
+            className={`tamanhoOpcao ${tamanhoSelecionado === tamanho.nome ? 'tamanhoOpcaoSelecionada' : ''}`}
             onClick={() => handleTamanhoChange(tamanho.nome)}
           >
             {tamanho.nome}
           </div>
         ))}
       </div>
-      <p style={{ fontSize: '14px', color: 'var(--dark-gray-3)',  }}>{subtitle_cor}</p>
-      <div style={styles.cor}>
+      <p className="subtitle-cor">{subtitle_cor}</p>
+      <div className="cor">
         {cores.map((cor) => (
           <div
             key={cor.id}
-            style={{
-              ...styles.corOpcao,
-              backgroundColor: cor.cor,
-              ...(corSelecionada === cor.nome && styles.corOpcaoSelecionada),
-            }}
+            className={`corOpcao ${corSelecionada === cor.nome ? 'corOpcaoSelecionada' : ''}`}
+            style={{ backgroundColor: cor.cor }}
             onClick={() => handleCorChange(cor.nome)}
           />
         ))}
       </div>
       {children}
-      <button style={{ backgroundColor: 'var(--warning)', color: 'white', fontSize: '16px', padding: '10px 20px', border: 'none', borderRadius: '4px', marginTop: '20px' }}>COMPRAR</button>
+      <button className="botao-comprar">COMPRAR</button>
     </div>
   );
 };

@@ -1,0 +1,45 @@
+.filter-group {
+
+    background-color: white;
+    width: 308px;
+  }
+  
+  .filter-group-title {
+    font-size: 16px;
+    color: var(--dark-gray-2);
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid black;
+  }
+  
+  .filter-group-subtitle {
+    font-size: 16px;
+    color: var(--dark-gray-2);
+  }
+  
+  
+  .filter-group-divider {
+    border: 1px solid var(--light-gray-2);
+  }
+  
+  .filter-group-options {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .filter-group-option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .filter-group-option input {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    accent-color: var(--primary);
+  }
+  
+  .filter-group-option label {
+    font-size: 14px;
+    color: var(--dark-gray-2);
+  }
