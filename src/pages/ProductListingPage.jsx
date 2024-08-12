@@ -1,7 +1,7 @@
 // src/pages/ProductListingPage.jsx
 import React, { useState } from 'react';
 import Section from '../components/Section';
-import ProductListing from '../components/ProductListing';
+import ProductList from '../components/ProductList';
 import FilterGroup from '../components/FilterGroup';
 import '../styles/components/ProductListingPage.css';
 import {productsData} from '../data/products';
@@ -78,7 +78,7 @@ const ProductListingPage = () => {
         </aside>
         <section className="product-listing-content">
           
-            <ProductListing products={products} />
+            <ProductList products={products} />
           
         </section>
       </div>

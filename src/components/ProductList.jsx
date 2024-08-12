@@ -5,18 +5,18 @@ import ProductCard from './ProductCard';
 import { useNavigate } from 'react-router-dom';
 import '../styles/components/ProductListingPage.css';
 
-const ProductListing = ({ products }) => {
+const ProductList = ({ products }) => {
   const navigate = useNavigate();
 
   return (
     <div className="product-listing">
       {products.map((product, index) => (
-        <div key={index} onClick={() => navigate(`/products/${product.id}`)}>
+        <div key={index} onClick={() => navigate(`/products/${product.id}`, { state: product })}>
           <ProductCard
             key={product.id}
             id={product.id}
             name={product.name}
-            image={product.image}
+            imagem={product.imagem}
             price={product.price}
             priceDiscount={product.priceDiscount}
           />
@@ -26,16 +26,16 @@ const ProductListing = ({ products }) => {
   );
 };
 
-ProductListing.propTypes = {
+ProductList.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
+      imagem: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
       priceDiscount: PropTypes.number
     })
   ).isRequired
 };
 
-export default ProductListing;
+export default ProductList;

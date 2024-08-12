@@ -4,23 +4,24 @@
     margin-left: 20px;
   }
   
-  .signup-link {
+  .signup {
     font-size: 16px;
-    color: dark-gray-2;
+    color: var(--dark-gray-2);
     text-decoration: underline;
     margin-right: 20px;
   }
   
   .login-button {
     background-color: var(--primary);
-    color: white;
+    color:var(--white);
     font-size: 14px;
-    font-weight: bold;
     padding: 10px 20px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
     transition: 0.5s ease-out;
+    width: 114px;
+    height: 40px;
   }
   
   .login-button:hover {
@@ -123,10 +124,6 @@
     transition: 1000ms;
   }
   
-  .botao-cadastre-se {
-    color: #474747;
-    margin: 20px;
-  }
   
   .nav-bar {
     width: 100%;

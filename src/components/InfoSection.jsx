@@ -1,7 +1,5 @@
-// src/components/InfoSection.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-/*import '../App.css';*/
 import '../styles/App.css';
 
 const InfoSection = ({ title, informations }) => {

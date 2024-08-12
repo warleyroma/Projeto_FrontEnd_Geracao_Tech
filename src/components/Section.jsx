@@ -3,11 +3,11 @@ import '../styles/components/Section.css';
 
 const Section = ({ title, titleAlign = 'left', link, children }) => {
   return (
-    <div className="section">
-      <div className={`section-header ${titleAlign}`}>
-        <h2>{title}</h2>
+    <div >
+      <div className={`title ${titleAlign}`}>
+        <div>{title}</div>
         {link && (
-          <a href={link.href} className="section-link">
+          <a href={link.href} className="link">
             {link.text}
           </a>
         )}

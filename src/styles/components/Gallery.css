@@ -37,15 +37,18 @@
   .gallery-thumbnails {
     display: flex;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
     background: var(--light-gray);
     padding: 10px 0;
+    gap: 10px;
+ 
   }
   
   .gallery-slider:hover .gallery-thumbnails {
@@ -55,26 +58,16 @@
   
   .gallery-thumbnail {
     cursor: pointer;
-    transition: opacity 0.3s ease, border 0.3s ease;
+    
+
   }
   
   
   .gallery-thumbnail.active {
-    opacity: 1;
-    border: 2px solid var(--primary-color);
+
+    border: 2px solid var(--primary);
+    
   }
   
-  .product-listing {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    /* Ajuste o espaçamento conforme necessário */
-  }
-  
-  .product-listing-page .product-listing {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    /* Ajuste o espaçamento conforme necessário */
-  }
+ 
   

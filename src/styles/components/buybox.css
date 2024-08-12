@@ -1,6 +1,6 @@
 .buybox {
     width: 400px;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,16 +47,16 @@
   }
   
   .estrela::before {
-    content: "\2605"; /* Unicode para estrela */
-    color: #ccc; /* Cor do contorno */
+    content: "\2605"; 
+    color: #ccc; 
   }
   
   .estrela.selecionada::before {
-    color: var(--warning); /* Cor da estrela preenchida */
+    color: var(--warning); 
   }
   
   .estrela:hover::before {
-    color:var(--warning); /* Cor da estrela ao passar o mouse */
+    color:var(--warning); 
   }
 .buybox .rating {
     display: flex;
@@ -185,8 +185,8 @@
     background-color: var(--warning);
     color: var(--white);
     margin: 0;
-    width: 50%;
-    height: 60px;
+    width: 60%;
+    height: 50px;
     cursor: pointer;
     font-size: 20px;
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Gallery from '../components/Gallery';
 import BuyBox from '../components/BuyBox';
 import Section from '../components/Section';
-import ProductListing from '../components/ProductListing';
+import ProductListing from '../components/ProductList';
 import { productsData } from '../data/products';
 import '../styles/pages/ProductViewPage.css'; 
 

@@ -5,13 +5,13 @@
     text-align: center;
   }
   
-  .product-image {
+  .imagem {
     width: 292px;
     height: 321px;
     object-fit: cover;
   }
   
-  .product-name {
+  .name {
     margin: 10px 0;
     color: var(--dark-gray);
     font-size: 18px;

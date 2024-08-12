@@ -1,4 +1,4 @@
-/* Estilo para o compoente productlisting e para a página productlisting */
+/* Estilo para o compoente productlisting e para a página productlist */
 .section-productlisting{
     padding: 0 90px 0 90px;
   }
@@ -67,3 +67,14 @@
     padding: 0 90px 0 0;
   }
   
+  .product-listing {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .product-listing-page .product-listing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }

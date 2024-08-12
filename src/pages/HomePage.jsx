@@ -2,7 +2,7 @@
 import React from 'react';
 import Gallery from '../components/Gallery';
 import Section from '../components/Section';
-import ProductListing from '../components/ProductListing';
+import ProductList from '../components/ProductList';
 import ofertaEspecialImage from '../assets/oferta-especial.png';
 import TenisImage from '../assets/tenis.png';
 import BonesImage from '../assets/bones.png';
@@ -46,7 +46,7 @@ const HomePage = () => {
         showThumbs
         images={images}
       />
-      <Section title="Coleções em Destaque" titleAlign="left">
+      <Section title="Coleções em Destaque" titleAlign="center">
         <div className="collections">
           {featuredCollections.map((collection, index) => (
             <div key={index} className="collection-item">
@@ -87,7 +87,7 @@ const HomePage = () => {
 
       <Section title="Produtos em Alta" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
       <div className='alinhaprodutos'>
-        <ProductListing products={productsData.slice(0, 8)} />
+        <ProductList products={productsData.slice(0, 8)} />
         </div>
       </Section>
 

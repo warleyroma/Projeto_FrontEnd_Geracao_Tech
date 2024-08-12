@@ -1,3 +1,22 @@
+/*
+
+Campo de busca com ícone de lupa: O código cria um formulário com um campo de texto e um botão de submit que contém o ícone de lupa (FaSearch).
+Realizar busca ao ser clicado ou ao pressionar Enter: O formulário tem um evento onSubmit que chama a função handleSearch quando o botão de submit é clicado ou quando o usuário pressiona Enter.
+Redirecionar para a rota /products com a query string do filtro: A função handleSearch verifica se o campo de busca não está vazio e, se não estiver, redireciona para a rota /products com a query string filter contendo o valor do campo de busca.
+Além disso, o código também inclui outras funcionalidades, como:
+
+Links para cadastro, login e navegação entre páginas
+Um componente de carrinho de compras
+Uma navegação com links para diferentes páginas
+
+
+
+Área de redirecionamento: O código cria uma div com a classe redirect-area que contém os links para cadastro e login.
+Link Cadastre-se: O código cria um link com o texto "Cadastre-se" que é renderizado em uma fonte de 16px na cor dark-gray-2 com uma sublinhado na mesma cor.
+Link Entrar: O código cria um botão com o texto "Entrar" que tem uma aparência de botão, com um preenchimento na cor primary, largura de 114px por 40px de altura, bordas arrendondadas em 4px e texto em negrito na cor white e font de 14px.
+
+
+*/ 
 import React, { useState } from 'react';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
@@ -44,7 +63,7 @@ const Header = () => {
         </button>
       </form>
       <div className="redirect-area">
-        <Link to="/signup" className={isActive('/signup')}>
+        <Link to="/signup" className='signup'>
           Cadastre-se
         </Link>
         <button className="login-button" onClick={handleLogin}>
