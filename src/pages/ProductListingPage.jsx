@@ -1,10 +1,9 @@
-// src/pages/ProductListingPage.jsx
 import React, { useState } from 'react';
 import Section from '../components/Section';
 import ProductList from '../components/ProductList';
 import FilterGroup from '../components/FilterGroup';
 import '../styles/components/ProductListingPage.css';
-import {productsData} from '../data/products';
+import { productsData } from '../data/products';
 
 const ProductListingPage = () => {
   const [sortOrder, setSortOrder] = useState('price-asc');
@@ -16,18 +15,17 @@ const ProductListingPage = () => {
   };
 
   return (
-   
+
     <div className='section-productlisting'>
       <div className="product-listing-sort">
-      <label htmlFor="sortOrder">Ordenar por</label>
+        
         <select id="sortOrder" value={sortOrder} onChange={handleSortChange}>
           <option value="price-asc">Menor preço</option>
           <option value="price-desc">Maior preço</option>
         </select>
-        <div className='resultados-produtos'><div>Resuldados para "Tênis"</div><div>- 15 produtos</div></div>
-       
+        <div className='resultados-produtos'></div>
+
       </div>
-      <div className="product-listing-page">
       <div className="product-listing">
         <aside className="product-listing-filters">
 
@@ -77,15 +75,17 @@ const ProductListingPage = () => {
             ]}
           />
         </aside>
-        <section className="product-listing-content">
-          
-            <ProductList products={products} />
-          
-        </section>
+        <div className='produtosProductList'>
+        <Section title='Resultados para "Tênis" - 15 produtos' >
+
+          <ProductList products={products} />
+
+        </Section>
+        </div>
       </div>
-      </div>
+
     </div>
-   
+
   );
 };
 

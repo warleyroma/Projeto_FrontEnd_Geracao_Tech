@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/components/buybox.css';
+import ProductOptions from './ProductOptions';
 
 const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, description, subtitle, subtitle_tam, subtitle_cor, children }) => {
   const [selectedStars, setSelectedStars] = useState(null);
