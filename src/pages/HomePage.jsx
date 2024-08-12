@@ -36,7 +36,7 @@ const ofertaEspecial = [
 
 const HomePage = () => {
   return (
-    <Section>
+    
     <div className='div'>
       <Gallery
         className="custom-gallery"
@@ -88,7 +88,7 @@ const HomePage = () => {
       <Section title="Produtos em Alta" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
       <div className='alinhaprodutos'>
         <ProductList products={productsData.slice(0, 8)} />
-        </div>
+      </div>
       </Section>
 
       <Section>
@@ -103,10 +103,8 @@ const HomePage = () => {
             <button className='button-ver-oferta'>Ver Oferta</button>
           </div>
         </div>
-
       </Section>
     </div>
-    </Section>
   );
 };
 

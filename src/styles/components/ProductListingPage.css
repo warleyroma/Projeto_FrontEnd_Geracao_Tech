@@ -2,15 +2,18 @@
 .section-productlisting{
     padding: 0 90px 0 90px;
   }
+
+  .sortOrder{
+    width: 500px;
+    height: 60px;
+  }
   
   .product-listing {
-    display: flex;
     flex-flow: row wrap;
     flex-grow: 1;
   }
   
   .alinhaprodutos .product-listing {
-    display: flex;
     flex-flow: row wrap;
     flex-grow: 1;
     padding: 0 65px 0 65px;
