@@ -19,12 +19,13 @@ const ProductListingPage = () => {
    
     <div className='section-productlisting'>
       <div className="product-listing-sort">
-        <div className='resultados-produtos'><div>Resuldados para "Tênis"</div><div>- 15 produtos</div></div>
-        <label htmlFor="sortOrder">Ordenar por</label>
+      <label htmlFor="sortOrder">Ordenar por</label>
         <select id="sortOrder" value={sortOrder} onChange={handleSortChange}>
           <option value="price-asc">Menor preço</option>
           <option value="price-desc">Maior preço</option>
         </select>
+        <div className='resultados-produtos'><div>Resuldados para "Tênis"</div><div>- 15 produtos</div></div>
+       
       </div>
       <div className="product-listing-page">
       <div className="product-listing">
@@ -41,9 +42,9 @@ const ProductListingPage = () => {
               { text: "Nike", value: "opt4" },
               { text: "Puma", value: "opt5" }
             ]}
+            isFirst={true}
           />
           <FilterGroup
-
             subtitle="Categoria"
             inputType="checkbox"
             options={[

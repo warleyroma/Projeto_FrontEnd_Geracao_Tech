@@ -1,11 +1,7 @@
 /* Estilo para o compoente productlisting e para a página productlist */
 .section-productlisting{
     padding: 0 90px 0 90px;
-  }
-
-  .sortOrder{
-    width: 500px;
-    height: 60px;
+    background-color: var(--light-gray-3);
   }
   
   .product-listing {
@@ -28,20 +24,21 @@
   
   
   .product-listing-filters {
-    width: 80%;
-    height: 100%;
-  
+    width: 308px;
+    height: max-content;
+    padding: 20px;
+    background-color: var(--white);
   }
   
   .product-listing-sort {
-    
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
   }
   
   .resultados-produtos {
     display: flex;
+    justify-content: flex-end;
     font-weight: bold;
     flex: 1;
   }
@@ -54,7 +51,7 @@
   }
   
   .product-listing-sort select {
-    width: 20%;
+    width: 308px;
     height: 60px;
     font-size: 16px;
     color: var(--dark-gray-2);

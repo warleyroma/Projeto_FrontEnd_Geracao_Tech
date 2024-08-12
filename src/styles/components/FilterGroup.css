@@ -1,5 +1,4 @@
 .filter-group {
-
     background-color: white;
     width: 308px;
   }
@@ -7,13 +6,20 @@
   .filter-group-title {
     font-size: 16px;
     color: var(--dark-gray-2);
-    margin: 0 0 20px 0;
-    border-bottom: 2px solid black;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid var(--light-gray-2);
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+
+  .filter-group-title hr:not(:first-child) {
+    display: none;
   }
   
   .filter-group-subtitle {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--dark-gray-2);
+    margin-top: 20px;
   }
   
   
@@ -35,6 +41,7 @@
   .filter-group-option input {
     width: 22px;
     height: 22px;
+    margin-left: 0;
     margin-right: 10px;
     accent-color: var(--primary);
   }
