@@ -18,10 +18,14 @@
     
   }
   
-  .product-listing > .produtosProductList {
-    /* estilos específicos para os elementos com classe .produtosProductList */
-  width: 130vh;
+  .product-listing .produtosProductList {
+  width: 71%;
   margin: 10px;  
+  }
+
+  .product-listing .produtosProductList  .product-listing div{
+  margin-right: 95px;
+  padding-right: 10px;  
   }
 
   .produtosProductList .section-content {
@@ -47,7 +51,8 @@
   
   .product-listing-sort {
     display: flex;
-    margin-bottom: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
     align-items: center;
     justify-content: center;
   }
