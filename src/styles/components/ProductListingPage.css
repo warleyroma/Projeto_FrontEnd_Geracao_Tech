@@ -1,77 +1,73 @@
 /* Estilo para o compoente productlisting e para a página productlist */
-.section-productlisting{
-    padding: 0 90px 0 90px;
-    background-color: var(--light-gray-3);
-  }
-  
-  .product-listing {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.section-productlisting {
+  padding: 0 90px 0 90px;
+  background-color: var(--light-gray-3);
+}
 
-  .produtosProductList .section-content {
-    padding: 0; 
-  }
-  
-  .produtosProductList .title.left {
-    padding: 0 0 0 40px;
-    
-  }
-  
-  .product-listing > .produtosProductList {
-    /* estilos específicos para os elementos com classe .produtosProductList */
-  width: 130vh;
-  margin: 10px;  
-  }
+.product-listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  .produtosProductList .section-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.produtosProductList {
+  width: calc(100% - 308px);
+  margin: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+}
 
-  .product-listing > div:not(.produtosProductList) {
-    /* estilos para os elementos que não têm a classe .produtosProductList */
-    width: calc(23% - 20px);
-    margin: 20px;
-    display: inline-block;
-    box-sizing: border-box;
-  }
-  
-  .product-listing-filters {
-    width: 308px;
-    height: max-content;
-    padding: 20px;
-    background-color: var(--white);
-  }
-  
-  .product-listing-sort {
-    display: flex;
-    margin-bottom: 30px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .resultados-produtos {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    flex: 1;
-  }
-  
-  .product-listing-sort label {
-    font-size: 16px;
-    color: var(--dark-gray-2);
-    margin-right: 10px;
-  }
-  
-  .product-listing-sort select {
-    width: 308px;
-    height: 60px;
-    font-size: 16px;
-    color: var(--dark-gray-2);
-    padding: 10px;
-    border: 1px solid var(--light-gray-2);
-    border-radius: 4px;
-  }
+.produtosProductList .section-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.produtosProductList .title.left {
+  padding: 0 0 0 40px;
+}
+
+.product-listing > div:not(.produtosProductList) {
+  width: calc(23% - 20px);
+  margin: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.product-listing-filters {
+  width: 308px;
+  height: max-content;
+  padding: 20px;
+  background-color: var(--white);
+}
+
+.product-listing-sort {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultados-produtos {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  flex: 1;
+}
+
+.product-listing-sort label {
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  margin-right: 10px;
+}
+
+.product-listing-sort select {
+  width: 308px;
+  height: 60px;
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  padding: 10px;
+  border: 1px solid var(--light-gray-2);
+  border-radius: 4px;
+}
