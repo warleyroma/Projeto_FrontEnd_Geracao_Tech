@@ -78,7 +78,7 @@ const ProductListingPage = () => {
         <div className='produtosProductList'>
         <Section title='Resultados para "Tênis" - 15 produtos' >
 
-          <ProductList products={products} />
+          <ProductList products={productsData.slice(0, 9)} />
 
         </Section>
         </div>
