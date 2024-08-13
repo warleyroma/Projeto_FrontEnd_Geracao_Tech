@@ -1,28 +1,25 @@
-Projeto Front End Geração Tech - Loja Virtual
-Descrição
+# Projeto Front End Geração Tech - Loja Virtual
+## Descrição
 Este projeto tem como objetivo demontrar os conhecimentos obtidos no decorrer do módulo front end do curso de desenvolvimento fullstack Geração Tech.
 
-Começando
-Pré-requisitos
-[Liste os pré-requisitos ou dependências necessárias para executar o projeto, por exemplo, software ou bibliotecas específicas]
-Instalação
-[Instruções passo a passo sobre como instalar o projeto, por exemplo, clonar o repositório, instalar dependências]
-Executando o Projeto
-[Instruções passo a passo sobre como executar o projeto, por exemplo, executar um script ou comando]
-Recursos
-[Liste os recursos principais do seu projeto, por exemplo, funcionalidades, algoritmos utilizados]
-Contribuindo
-Contribuições são bem-vindas! Se você gostaria de contribuir para este projeto, por favor, siga os seguintes passos:
+## Começando
+## Pré-requisitos
+- Sistema operacional Windows ou linux
+- Github desktop instalado ou git tradicional via prompt de comando
+- Visual Code Studio instalado
+- Node.js instalado
+- Vite instalado
 
-[Instruções passo a passo sobre como contribuir, por exemplo, criar um fork do repositório, criar um pull request]
-Licença
-Este projeto é licenciado sob [nome da licença, por exemplo, MIT, GPL].
 
-Autores
-[Seu nome]
-[Nomes de outros contribuidores]
-Agradecimentos
-[Liste os agradecimentos ou créditos, por exemplo, inspiração de outros projetos]
-Changelog
-[Liste as alterações notáveis ou atualizações do projeto, por exemplo, novas funcionalidades, correções de bugs]
-Espero que isso ajude! Se você precisar de mais ajuda, basta perguntar.
+## Instalação
+- Instale o Github desktop ou Git tradicional
+- Faça o clone deste projeto em sua maquina
+- Instale o visual studio code
+- Abra a pasta do projeto com o visual studio code
+- instale o node.js e o vite
+- Execute o projeto com o comando npm run dev
+
+## Autor
+Warleyson Costa Roma
+
+## Espero que isso ajude! Se você precisar de mais ajuda, basta perguntar.
