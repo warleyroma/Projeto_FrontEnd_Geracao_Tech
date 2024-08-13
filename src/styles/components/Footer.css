@@ -22,12 +22,11 @@
     
   }
   
-  .footer-logo img {
+  .footer-logo-description .logo img {
     margin-bottom: 35px;
     filter: brightness(0) invert(1);
     width: 253px;
     height: 44px;
-  
   }
   
   .footer-logo-description p {
