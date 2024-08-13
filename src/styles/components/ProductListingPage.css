@@ -23,9 +23,10 @@
   margin: 10px;  
   }
 
-  .product-listing .produtosProductList  .product-listing div{
-  margin-right: 95px;
-  padding-right: 10px;  
+  .product-listing .produtosProductList  .product-listing {
+  margin-right: 90px;
+  display: flex;
+  justify-content: space-around;
   }
 
   .produtosProductList .section-content {
