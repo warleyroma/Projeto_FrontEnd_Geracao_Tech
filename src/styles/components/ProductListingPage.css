@@ -1,58 +1,61 @@
 /* Estilo para o compoente productlisting e para a página productlist */
-.section-productlisting {
+.section-productlisting{
   padding: 0 90px 0 90px;
   background-color: var(--light-gray-3);
 }
 
 .product-listing {
   display: flex;
-  flex-wrap:wrap;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.produtosProductList .section-content {
+  padding: 0; 
 }
 
 .produtosProductList .title.left {
-    padding: 0 0 0 40px;
-  }
+  padding: 0 0 0 40px;
+}
+
+.product-listing .produtosProductList {
+width: 71%;
+margin: 10px;  
+}
+
+.product-listing .produtosProductList  .product-listing {
+margin-right: 90px;
+display: flex;
+justify-content: space-around;
+}
+
+.produtosProductList .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .product-listing > div:not(.produtosProductList) {
+  /* estilos para os elementos que não têm a classe .produtosProductList */
   width: calc(23% - 20px);
   margin: 20px;
   display: inline-block;
   box-sizing: border-box;
 }
 
-.produtosProductList .section-content div {
-  width: calc(100% - 600px)
-}
-
 .product-listing-filters {
-  width: 308px; /* Reduza a largura do painel de filtros */
+  width: 308px;
   height: max-content;
   padding: 20px;
   background-color: var(--white);
-  flex-shrink: 0; /* Evita que a largura seja reduzida */
 }
 
 .product-listing-sort {
   display: flex;
-  margin-bottom: 30px;
+  padding-top: 20px;
+  margin-bottom: 20px;
   align-items: center;
-  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 100%; /* Garante que ocupe toda a largura */
+  justify-content: center;
 }
-
-.produtosProductList .section-content{
-  padding: 0;
-}
-.produtosProductList {
-  width: 400px; /* Espaço restante após os filtros */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Alinha os conteúdos à esquerda */
-  flex-grow: 1; /* Permite que cresça para ocupar o espaço disponível */
-}
-
-
 
 .resultados-produtos {
   display: flex;
@@ -76,5 +79,4 @@
   border: 1px solid var(--light-gray-2);
   border-radius: 4px;
 }
-
 
