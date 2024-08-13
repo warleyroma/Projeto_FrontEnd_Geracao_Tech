@@ -18,7 +18,7 @@ const ProductListingPage = () => {
 
     <div className='section-productlisting'>
       <div className="product-listing-sort">
-        
+        <label htmlFor="sortOrder">Ordernar por:</label>
         <select id="sortOrder" value={sortOrder} onChange={handleSortChange}>
           <option value="price-asc">Menor preço</option>
           <option value="price-desc">Maior preço</option>
