@@ -1,0 +1,195 @@
+.buybox {
+    width: 400px;
+    padding: 0 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buybox .title {
+    font-size: 32px;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+.buybox .reference {
+    font-size: 12px;
+    color: var(--dark-gray-3);
+    margin-bottom: 10px;
+}
+
+.buybox .content-estrelas-rating-rating-count {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.buybox .estrelas {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.estrelas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 2px;
+    padding-bottom: 15px;
+  }
+  
+  .estrela {
+    font-size: 25px;
+    margin-right: 0px;
+    cursor: pointer;
+  
+  }
+  
+  .estrela::before {
+    content: "\2605"; 
+    color: #ccc; 
+  }
+  
+  .estrela.selecionada::before {
+    color: var(--warning); 
+  }
+  
+  .estrela:hover::before {
+    color:var(--warning); 
+  }
+.buybox .rating {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    justify-items: center;
+    font-weight: bold;
+    width: 60px;
+    height: 22px;
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--warning);
+    border-radius: 4px;
+}
+
+.buybox .rating-count {
+    font-size: 12px;
+    color: var(--light-gray);
+    margin-left: 5px;
+}
+
+.buybox .price {
+    display: flex;
+    align-items: center;
+    color: var(--dark-gray-2);
+    margin-bottom: 20px;
+}
+
+.buybox .coin {
+    color: var(--dark-gray);
+    font-weight: lighter;
+    align-self: flex-end;
+    padding-bottom: 8px;
+    margin-right: 5px;
+}
+
+.buybox .price-discount {
+    font-size: 32px;
+    color: var(--dark-gray);
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.buybox .price-original {
+    font-size: 16px;
+    color: var(--light-gray-2);
+    text-decoration: line-through;
+    align-content: center;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.buybox .description {
+    font-size: 18px;
+    color: var(--dark-gray-3);
+    margin-bottom: 20px;
+    text-align: justify;
+    width: 100%;
+}
+
+.buybox .subtitle {
+    font-size: 14px;
+    color: var(--dark-gray-3);
+    margin-bottom: 10px;
+}
+
+.buybox .subtitle-tam {
+    font-size: 14px;
+    color: var(--dark-gray-3);
+    margin-bottom: 10px;
+}
+
+.buybox .subtitle-cor {
+    font-size: 14px;
+    color: var(--dark-gray-3);
+    margin-bottom: 10px;
+}
+
+.buybox .tamanho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    margin-bottom: 5px;
+}
+
+.buybox .tamanhoOpcao {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px 10px 0px 0;
+}
+
+.buybox .tamanhoOpcaoSelecionada {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.buybox .cor {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    margin-bottom: 20px;
+
+}
+
+.buybox .corOpcao {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.buybox .corOpcaoSelecionada {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+
+}
+
+.buybox .botao-comprar {
+    background-color: var(--warning);
+    color: var(--white);
+    margin: 0;
+    width: 60%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+}

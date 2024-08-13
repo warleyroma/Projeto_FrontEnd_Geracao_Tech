@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../styles/components/Error404.css';
 import Section from './Section';
 
 

@@ -1,0 +1,28 @@
+
+.under-construction-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 120px;
+    font-weight: bold;
+    color: var(--error);
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+  
+  .under-construction-title2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark-gray);
+    margin: 0 0 35px 0;
+    text-align: center;
+  }
+  
+  .under-construction-title3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    color: var(--dark-gray-2);
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-weight: lighter;
+  }
+  

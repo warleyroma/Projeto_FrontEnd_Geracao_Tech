@@ -1,7 +1,7 @@
 // src/components/Gallery.jsx
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../App.css';
+import '../styles/components/Gallery.css';
 import arrowRightIcon from '../assets/arrow-right.svg';
 import arrowLeftIcon from '../assets/arrow-left.svg';
 
@@ -27,7 +27,7 @@ const Gallery = ({ className, width, height, radius, showThumbs, images }) => {
   return (
     <div className={`gallery-content ${className}`} style={{ width }}>
       <div className="gallery-slider" style={{ height, borderRadius: radius }}>
-        <img src={images[currentIndex].src} alt={`Slide ${currentIndex}`} className="gallery-image" style={{ borderRadius: radius, width: '100%', height: '100%' }} />
+        <img src={images[currentIndex].src} alt={`Slide ${currentIndex}`} className="gallery-image" style={{ borderRadius: radius, }} />
         <button className="gallery-arrow gallery-arrow-left" onClick={handlePrevClick} disabled={currentIndex === 0}>
           <img src={arrowLeftIcon} alt="Previous" />
         </button>

@@ -1,0 +1,48 @@
+
+.product-card {
+    width: 292px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .imagem {
+    width: 292px;
+    height: 321px;
+    object-fit: cover;
+  }
+  
+  .name {
+    margin: 10px 0;
+    color: var(--dark-gray);
+    font-size: 18px;
+  }
+  
+  .price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .product-price {
+    color: var(--dark-gray);
+    font-size: 24px;
+  
+  }
+  
+  .original-price {
+    color: var(--light-gray);
+    text-decoration: line-through;
+  
+  }
+  
+  .discount-price {
+    color: var(--dark-gray);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  

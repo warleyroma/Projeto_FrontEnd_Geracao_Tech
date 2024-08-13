@@ -1,0 +1,53 @@
+:root {
+  --primary: #C92071;
+  --secondary: #B5B6F2;
+  --tertiary: #991956;
+  --error: #EE4266;
+  --success: #52CA76;
+  --warning: #F6AA1C;
+
+  --dark-gray: #1F1F1F;
+  --dark-gray-2: #474747;
+  --dark-gray-3: #666666;
+  --light-gray: #8F8F8F;
+  --light-gray-2: #CCCCCC;
+  --light-gray-3: #F5F5F5;
+  --white: #FFFFFF;
+  --discount: #e5ff00;
+
+  --cor1: #6FEEFF;
+  --cor2: #FF6969;
+  --cor3: #5E5E5E;
+  --cor4: #6D70B7;
+
+}
+
+html {
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.div {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}

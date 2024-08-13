@@ -2,14 +2,15 @@
 import React from 'react';
 import Gallery from '../components/Gallery';
 import Section from '../components/Section';
-import ProductListing from '../components/ProductListing';
+import ProductList from '../components/ProductList';
 import ofertaEspecialImage from '../assets/oferta-especial.png';
 import TenisImage from '../assets/tenis.png';
 import BonesImage from '../assets/bones.png';
 import CamisaImage from '../assets/camisa.png';
 import HeadphoneImage from '../assets/headphone.png';
 import CalcaImage from '../assets/calca.png';
-import '../App.css';
+import {productsData} from '../data/products';
+import '../styles/pages/HomePage.css'; 
 
 const images = [
   { src: '/home-slide-1.jpeg' },
@@ -28,61 +29,6 @@ const featuredCollections = [
   { src: '/collection-3.png' }
 ];
 
-const trendingProducts = [
-  {
-    id: 1,
-    name: "Produto 1",
-    image: "/product-thumb-1.jpeg",
-    price: 299,
-    priceDiscount: 249.9
-  },
-  {
-    id: 2,
-    name: "Produto 2",
-    image: "/product-thumb-2.jpeg",
-    price: 99.9
-  },
-  {
-    id: 3,
-    name: "Produto 3",
-    image: "/product-thumb-3.jpeg",
-    price: 299,
-    priceDiscount: 249.9
-  },
-  {
-    id: 4,
-    name: "Produto 4",
-    image: "/product-thumb-4.jpeg",
-    price: 99.9
-  },
-  {
-    id: 5,
-    name: "Produto 5",
-    image: "/product-thumb-5.jpeg",
-    price: 299,
-    priceDiscount: 249.9
-  },
-  {
-    id: 6,
-    name: "Produto 6",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+6",
-    price: 140,
-    priceDiscount: 70.9
-  },
-  {
-    id: 7,
-    name: "Produto 7",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+7",
-    price: 205,
-    priceDiscount: 100.9
-  },
-  {
-    id: 8,
-    name: "Produto 8",
-    image: "https://via.placeholder.com/292x321.png?text=Produto+8",
-    price: 49.9
-  }
-];
 
 const ofertaEspecial = [
   { src: '../assets/oferta-especial.png' },
@@ -90,7 +36,7 @@ const ofertaEspecial = [
 
 const HomePage = () => {
   return (
-    <Section>
+    
     <div className='div'>
       <Gallery
         className="custom-gallery"
@@ -100,7 +46,7 @@ const HomePage = () => {
         showThumbs
         images={images}
       />
-      <Section title="Coleções em Destaque" titleAlign="left">
+      <Section title="Coleções em Destaque" titleAlign="center">
         <div className="collections">
           {featuredCollections.map((collection, index) => (
             <div key={index} className="collection-item">
@@ -139,8 +85,10 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section title="Produtos em Alta" titleAlign="left">
-        <ProductListing products={trendingProducts} />
+      <Section title="Produtos em Alta" titleAlign="left" link={{ text: "Ver todos", href: "/products" }}>
+      
+        <ProductList products={productsData.slice(0, 8)} />
+      
       </Section>
 
       <Section>
@@ -155,10 +103,8 @@ const HomePage = () => {
             <button className='button-ver-oferta'>Ver Oferta</button>
           </div>
         </div>
-
       </Section>
     </div>
-    </Section>
   );
 };
 
