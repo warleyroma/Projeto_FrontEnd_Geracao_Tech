@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/components/ModalCadastro.css'; 
 
 function ModalCadastro({ isOpen, closeModal }) {
+  // Adiciona ou remove a classe que desabilita a rolagem
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+
+    // Remove a classe quando o componente é desmontado
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null; // Se o modal não estiver aberto, não renderize nada
 
   return (

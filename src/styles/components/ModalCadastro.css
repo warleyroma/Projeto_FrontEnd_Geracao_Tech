@@ -1,4 +1,10 @@
-.modal {
+/* Desabilita a rolagem do body quando o modal está aberto */
+.modal-open {
+    overflow: hidden;
+  }
+  
+  /* Estilos do modal */
+  .modal {
     position: fixed;
     top: 0;
     left: 0;
