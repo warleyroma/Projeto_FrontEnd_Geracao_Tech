@@ -70,7 +70,7 @@ const Header = () => {
         </button>
       </form>
       <div className="redirect-area">
-        <Link to="/signup" className='signup'  onClick={openSignUpModal} >
+        <Link className='signup'  onClick={openSignUpModal} >
           Cadastre-se
         </Link>
         <button className="login-button" onClick={handleLogin}>
