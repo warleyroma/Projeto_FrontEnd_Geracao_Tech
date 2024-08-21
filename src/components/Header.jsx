@@ -22,10 +22,13 @@ import { useNavigate, Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import Carrinho from './Carrinho';
 import { FaSearch } from 'react-icons/fa';
-import '../styles/components/Header.css'; 
+import '../styles/components/Header.css';
+import ModalCadastro from './ModalCadastro';
 
 const Header = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -40,8 +43,12 @@ const Header = () => {
     navigate('/login');
   };
 
-  const handleSignUp = () => {
-    navigate('/signup');
+  const openSignUpModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeSignUpModal = () => {
+    setIsModalOpen(false);
   };
 
   const isActive = (path) => {
@@ -63,7 +70,7 @@ const Header = () => {
         </button>
       </form>
       <div className="redirect-area">
-        <Link to="/signup" className='signup'>
+        <Link to="/signup" className='signup'  onClick={openSignUpModal} >
           Cadastre-se
         </Link>
         <button className="login-button" onClick={handleLogin}>
@@ -97,6 +104,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <ModalCadastro isOpen={isModalOpen} closeModal={closeSignUpModal} />
     </header>
   );
 };
