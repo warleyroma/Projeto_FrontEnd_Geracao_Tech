@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../styles/components/ModalCadastro.css';
 
 function ModalCadastro({ isOpen, closeModal }) {
@@ -19,17 +20,14 @@ function ModalCadastro({ isOpen, closeModal }) {
       password,
     };
 
-    fetch('http://localhost:3000/v1/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
+    axios.post('http://localhost:3000/v1/users', userData)
+      .then((response) => {
         setLoading(false);
-        console.log(data);
+        console.log(response.data);
+        setFirstname('');
+        setSurname('');
+        setEmail('');
+        setPassword('');
       })
       .catch((error) => {
         setLoading(false);
@@ -71,6 +69,7 @@ function ModalCadastro({ isOpen, closeModal }) {
             value={firstname}
             onChange={(event) => setFirstname(event.target.value)}
             required
+            autoComplete="off"
           />
           <input
             placeholder="Sobrenome"
@@ -80,6 +79,7 @@ function ModalCadastro({ isOpen, closeModal }) {
             value={surname}
             onChange={(event) => setSurname(event.target.value)}
             required
+            autoComplete="off"
           />
           <input
             placeholder="Email"
@@ -89,6 +89,7 @@ function ModalCadastro({ isOpen, closeModal }) {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             required
+            autoComplete="off"
           />
           <input
             placeholder="Senha"
@@ -98,6 +99,7 @@ function ModalCadastro({ isOpen, closeModal }) {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             required
+            autoComplete="off"
           />
           <button type="submit" disabled={loading}>
             {loading ? 'Carregando...' : 'Cadastrar'}
