@@ -9,6 +9,7 @@ function ModalCadastro({ isOpen, closeModal }) {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false); // novo estado para controlar a visibilidade da mensagem de sucesso
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,6 +29,7 @@ function ModalCadastro({ isOpen, closeModal }) {
         setSurname('');
         setEmail('');
         setPassword('');
+        setSuccess(true); // atualiza o estado de sucesso para true
       })
       .catch((error) => {
         setLoading(false);
@@ -102,9 +104,14 @@ function ModalCadastro({ isOpen, closeModal }) {
             autoComplete="off"
           />
           <button type="submit" disabled={loading}>
-            {loading ? 'Carregando...' : 'Cadastrar'}
+            {loading ? 'Carregando...' : 'Cadastre-se'}
           </button>
           {error && <p style={{ color: 'red' }}>{error}</p>}
+          {success && (
+            <p style={{ color: 'green' }}>
+              Usuário cadastrado com sucesso!
+            </p>
+          )}
         </form>
       </div>
     </div>
