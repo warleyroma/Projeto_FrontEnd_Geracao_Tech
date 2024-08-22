@@ -23,15 +23,19 @@ function ModalCadastro({ isOpen, closeModal }) {
       <div className="modal-content">
         <span className="close" onClick={closeModal}>&times;</span>
         <h2>Cadastre-se</h2>
-        <form>
-          <label htmlFor="username">Usuário:</label>
-          <input type="text" id="username" name="username" required />
+        <div className='avisolgpd'>
+        <img class="icon" src="https://ae01.alicdn.com/kf/Sa0be8b1ad53f401b8cfb2c5e3bc5373dG/22x26.png" alt="" srcset="" ></img>
+          <p>Suas informações estão protegidas</p>
+          </div>
+        <form className='form'>
+       
+          <input placeholder="Nome completo" type="text" id="username" name="username" required />
           
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+         
+          <input placeholder="Email" type="email" id="email" name="email" required />
           
-          <label htmlFor="password">Senha:</label>
-          <input type="password" id="password" name="password" required />
+       
+          <input placeholder="Senha" type="password" id="password" name="password" required />
           
           <button type="submit">Cadastrar</button>
         </form>
