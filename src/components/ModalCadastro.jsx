@@ -15,7 +15,7 @@ function ModalCadastro({ isOpen, closeModal }) {
       password,
     };
 
-    fetch('http://seu-servidor.com/cadastro', {
+    fetch('http://localhost:3000/v1/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
