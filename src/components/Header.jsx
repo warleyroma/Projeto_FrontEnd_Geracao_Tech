@@ -16,7 +16,7 @@ Link Cadastre-se: O código cria um link com o texto "Cadastre-se" que é render
 Link Entrar: O código cria um botão com o texto "Entrar" que tem uma aparência de botão, com um preenchimento na cor primary, largura de 114px por 40px de altura, bordas arrendondadas em 4px e texto em negrito na cor white e font de 14px.
 
 
-*/ 
+*/
 import React, { useState } from 'react';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
@@ -29,7 +29,8 @@ import ModalLogin from './ModalLogin';
 const Header = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -41,20 +42,20 @@ const Header = () => {
   };
 
   const openLoginModal = () => {
-    setIsModalOpen(true);
+    setIsLoginModalOpen(true);
   };
 
   const closeLoginModal = () => {
-    setIsModalOpen(false);
+    setIsLoginModalOpen(false);
   };
 
 
   const openSignUpModal = () => {
-    setIsModalOpen(true);
+    setIsSignUpModalOpen(true);
   };
 
   const closeSignUpModal = () => {
-    setIsModalOpen(false);
+    setIsSignUpModalOpen(false);
   };
 
   const isActive = (path) => {
@@ -76,7 +77,7 @@ const Header = () => {
         </button>
       </form>
       <div className="redirect-area">
-        <Link className='signup'  onClick={openSignUpModal} >
+        <Link className='signup' onClick={openSignUpModal} >
           Cadastre-se
         </Link>
         <button className="login-button" onClick={openLoginModal}>
@@ -110,8 +111,8 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <ModalCadastro isOpen={isModalOpen} closeModal={closeSignUpModal} />
-      <ModalLogin isOpen={isModalOpen} closeModal={closeLoginModal} />
+      <ModalLogin isOpen={isLoginModalOpen} closeModal={() => setIsLoginModalOpen(false)} />
+      <ModalCadastro isOpen={isSignUpModalOpen} closeModal={() => setIsSignUpModalOpen(false)} />
     </header>
   );
 };

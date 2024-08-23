@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import '../styles/components/ModalCadastro.css';
 
 function ModalCadastro({ isOpen, closeModal }) {
@@ -113,6 +113,14 @@ function ModalCadastro({ isOpen, closeModal }) {
             </p>
           )}
         </form>
+        <div className='link2' href="">Problemas ao acessar sua conta?</div>
+
+        <p className='acessorapido'>
+          <span className='left'></span>
+          <label htmlFor="">Acesso rápido com</label>
+          <span className='right'></span>
+        </p>
+
       </div>
     </div>
   );
