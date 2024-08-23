@@ -20,11 +20,10 @@
 
 }
 
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  height: 650px;
-  width: 500px;
+.login .modal-content {
+ background-color: white;
+  height: 660px;
+  width: 520px;
   max-width: 90%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -32,11 +31,13 @@
   text-align: center;
 }
 
-.modal h2 {
+.modal .login  h2 {
   font-size: 22px;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
-.close {
+.login .close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -44,7 +45,7 @@
   cursor: pointer;
 }
 
-.avisolgpd {
+.login .avisolgpd {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,39 +54,47 @@
   height: 30px;
 }
 
-.icon {
+.login .icon {
   margin-right: 8px;
   width: 11px;
   height: 13px;
 }
 
-.form {
+.login .form {
   display: flex;
   flex-direction: column;
+  height: 70%;
   width: 100%;
   background-color: white;
+  justify-content: center;
+  align-items: center;
 }
 
-.form input {
+.login .form input {
   border: 1px solid #b9b7b7;
-  height: 50px;
+  height: 40px;
   border-radius: 10px;
   background-color: white;
   margin: 10px 0 10px 0;
   padding-left: 10px;
+  width: 75%;
 }
 
-.form button:hover {
+.login .form input::placeholder {
+  font-size: 14px; /* ou qualquer outro valor que você deseje */
+}
+
+.login .form button:hover {
   background-color: #991a57;
   color: #FFFFFF;
   transition: 1000ms;
 }
 
-.form button {
+.login .form button {
   background-color: var(--primary);
-  height: 50px;
-  width: 98%;
-  border-radius: 10px;
+  height: 40px;
+  width: 77%;
+  border-radius: 20px;
   font-size: 15px;
   color: white;
   transition: 0.5s ease-out;

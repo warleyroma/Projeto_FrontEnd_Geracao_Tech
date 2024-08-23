@@ -55,6 +55,7 @@ function ModalLogin({ isOpen, closeModal }) {
 
   return (
     <div className="modal">
+      <div className='login'>
       <div className="modal-content">
         <span className="close" onClick={closeModal}>&times;</span>
         <h2>Login</h2>
@@ -63,26 +64,7 @@ function ModalLogin({ isOpen, closeModal }) {
           <p>Suas informações estão protegidas</p>
         </div>
         <form className="form" onSubmit={handleSubmit}>
-          <input
-            placeholder="Nome completo"
-            type="text"
-            id="firstname"
-            name="firstname"
-            value={firstname}
-            onChange={(event) => setFirstname(event.target.value)}
-            required
-            autoComplete="off"
-          />
-          <input
-            placeholder="Sobrenome"
-            type="text"
-            id="surname"
-            name="surname"
-            value={surname}
-            onChange={(event) => setSurname(event.target.value)}
-            required
-            autoComplete="off"
-          />
+          
           <input
             placeholder="Email"
             type="email"
@@ -113,6 +95,7 @@ function ModalLogin({ isOpen, closeModal }) {
             </p>
           )}
         </form>
+      </div>
       </div>
     </div>
   );

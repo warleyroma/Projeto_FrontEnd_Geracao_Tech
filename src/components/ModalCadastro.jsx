@@ -55,6 +55,7 @@ function ModalCadastro({ isOpen, closeModal }) {
 
   return (
     <div className="modal">
+      <div className='cadastro'>
       <div className="modal-content">
         <span className="close" onClick={closeModal}>&times;</span>
         <h2>Cadastre-se</h2>
@@ -121,6 +122,7 @@ function ModalCadastro({ isOpen, closeModal }) {
           <span className='right'></span>
         </p>
 
+      </div>
       </div>
     </div>
   );

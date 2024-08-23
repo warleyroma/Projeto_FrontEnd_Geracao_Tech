@@ -20,7 +20,7 @@
 
 }
 
-.modal-content {
+.cadastro .modal-content {
   background-color: white;
   height: 660px;
   width: 520px;
@@ -31,13 +31,13 @@
   text-align: center;
 }
 
-.modal h2 {
-  font-size: 20px;
-  padding-top: 10px;
+.modal .cadastro  h2 {
+  font-size: 22px;
+  padding-top: 40px;
   padding-bottom: 10px;
 }
 
-.close {
+.cadastro .close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-.avisolgpd {
+.cadastro .avisolgpd {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,13 +55,13 @@
   margin-bottom: 10px;
 }
 
-.icon {
+.cadastro .icon {
   margin-right: 8px;
   width: 11px;
   height: 13px;
 }
 
-.form {
+.cadastro .form {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -69,7 +69,7 @@
 }
 
 
-.form input {
+.cadastro .form input {
   border: 1px solid #b9b7b7;
   height: 40px;
   border-radius: 10px;
@@ -80,17 +80,17 @@
 
 }
 
-.form input::placeholder {
+.cadastro .form input::placeholder {
   font-size: 14px; /* ou qualquer outro valor que você deseje */
 }
 
-.form button:hover {
+.cadastro .form button:hover {
   background-color: #991a57;
   color: #FFFFFF;
   transition: 1000ms;
 }
 
-.form button {
+.cadastro .form button {
   background-color: var(--primary);
   height: 40px;
   width: 77%;
@@ -102,13 +102,13 @@
   margin-top: 10px;
 }
 
-.link2{
+.cadastro .link2{
   padding: 10px;
   text-decoration: underline;
   font-size: 12px;
 }
 
-.acessorapido{
+.cadastro .acessorapido{
 display: flex;
 align-items: center;
 justify-content: center;
@@ -116,7 +116,7 @@ font-size: 14px;
 padding-top: 10px;
 }
 
-.acessorapido .left{
+.cadastro .acessorapido .left{
   display: inline-block;
   height: 1px;
   width: 22%;
@@ -124,11 +124,11 @@ padding-top: 10px;
 
 }
 
-.acessorapido label{
+.cadastro .acessorapido label{
   padding: 0 10px 0 10px;
 }
 
-.acessorapido .right{
+.cadastro .acessorapido .right{
   display: inline-block;
   height: 1px;
   width: 22%;
