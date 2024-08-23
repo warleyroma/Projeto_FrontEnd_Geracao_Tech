@@ -24,6 +24,7 @@ import Carrinho from './Carrinho';
 import { FaSearch } from 'react-icons/fa';
 import '../styles/components/Header.css';
 import ModalCadastro from './ModalCadastro';
+import ModalLogin from './ModalLogin';
 
 const Header = () => {
 
@@ -39,9 +40,14 @@ const Header = () => {
     }
   };
 
-  const handleLogin = () => {
-    navigate('/login');
+  const openLoginModal = () => {
+    setIsModalOpen(true);
   };
+
+  const closeLoginModal = () => {
+    setIsModalOpen(false);
+  };
+
 
   const openSignUpModal = () => {
     setIsModalOpen(true);
@@ -73,7 +79,7 @@ const Header = () => {
         <Link className='signup'  onClick={openSignUpModal} >
           Cadastre-se
         </Link>
-        <button className="login-button" onClick={handleLogin}>
+        <button className="login-button" onClick={openLoginModal}>
           Entrar
         </button>
       </div>
@@ -105,6 +111,7 @@ const Header = () => {
         </ul>
       </nav>
       <ModalCadastro isOpen={isModalOpen} closeModal={closeSignUpModal} />
+      <ModalLogin isOpen={isModalOpen} closeModal={closeLoginModal} />
     </header>
   );
 };
